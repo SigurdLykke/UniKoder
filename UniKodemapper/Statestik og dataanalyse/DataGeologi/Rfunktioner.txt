@@ -1,0 +1,154 @@
+
+
+########################################################################
+# Funktion til indtegning af konfidensintervaller.
+# Input er punkter (x,y), og nedre og øvre endepunkter i 
+# konfidensintervaller. Alle vektorer har samme længde.
+#
+
+errorbar=function(x,y,lower,upper){
+ # Input: fire vektorer af samme længde med 1. og 2.-koordinater til 
+ # midtpunkter, samt nedre og øvre endepunkt i konfidensintervaller.
+ points(x,y)
+ arrows(x,lower,x,upper,code=3,angle=90,length=0.05)
+}
+
+#######################################################################
+
+# Funktion der beregner konfidensinterval for ukendte værdi 
+# af forklarende variabel i regressionsmodel. Input er 
+# output fra kaldet lm(x~t) og nye målinger y.
+
+inversReg=function(lmUD,y){
+ # Input: output fra lm(x~t), samt vektor med gentagne målinger af respons 
+ # for fast men ukendt værdi af forklarende variabel.
+ sumUD=summary(lmUD)
+ xbar=mean(lmUD$model[,1])
+ m=length(y)
+ ybar=mean(y)
+ t0=qt(0.975,sumUD$df[2])
+ ahat=sumUD$coefficients[1,1]
+ bhat=sumUD$coefficients[2,1]
+ s2r=(sumUD$sigma)^2
+ ssdt=s2r/(sumUD$coefficients[2,2])^2
+ uA=bhat^2-t0^2*s2r/ssdt
+ if (uA>0){
+ uB=-2*t0^2*s2r*(ybar-xbar)/(bhat*ssdt)
+ uC=-t0^2*s2r*(1/m+1/(sumUD$df[2]+2)+(ybar-xbar)^2/(bhat^2*ssdt))
+ thetahat=(ybar-ahat)/bhat
+ konfInt=thetahat+(-uB+c(-1,1)*sqrt(uB^2-4*uA*uC))/(2*uA)
+ return(list(Estimat=thetahat,Konfidensinterval=konfInt))
+ } else {
+  return("Problem er ikke veldefineret da beta kan være nul")
+ }
+}
+
+#######################################################################
+
+# Funktionen additivitetsPlot beregner gennemsnit i hver gruppe 
+# defineret ved A:B (A og B er faktorer) og afsætter disse mod A.
+# For hvert niveau af B forbindes gennemsnit. 
+# Desuden angives plus minus standard error for gennemsnittet.
+
+additivitetsPlot=function(A,B,x){
+ # Input: faktor A og faktor B samt vektor med responsværdier x.
+ nlevB=length(levels(B))
+ NavnA <-deparse(substitute(A))
+ NavnB <-deparse(substitute(B))
+ interaction.plot(A,B,x,ylim=range(x),col=c(1:nlevB),fixed=TRUE,
+ xlab=NavnA,trace.label=NavnB,ylab="Gennemsnit")
+ me=aggregate(x,list(A:B),mean)
+ sdv=aggregate(x,list(A:B),sd)
+ n=aggregate(x,list(A:B),length)
+ lower=me[,2]-sdv[,2]/sqrt(n[,2])
+ upper=me[,2]+sdv[,2]/sqrt(n[,2])
+ levA=levels(A)
+ nlevA=length(levA)
+ for (i in 1:nlevB){
+ med=(c(1:nlevA)-1)*nlevB+i
+ arrows(c(1:nlevA),lower[med],c(1:nlevA),upper[med],
+ code=3,angle=90,length=0.05,col=i)
+ }
+}
+
+########################################################################
+
+# Funktionen forward udfører forward selektion i en multipel 
+# regressionsmodel, hvor i alt nTrin variable inkluderes. 
+# Input er en matrix T med værdierne af de forklarende variable, 
+# en vektor x med responsværdierne og antallet nTrin af variable 
+# der skal inkluderes.
+
+forward=function(T,x,nTrin){
+  # Input: matriks T (n rækker, d søjler), vektor x af længde n med responsværdier, 
+  # samt antallet nTrin af variable der inkluderes i forward selektion.
+  d=dim(T)[2]; n=length(x)
+  svek=rep(0,nTrin)
+  pvalvek=rep(0,nTrin)
+  ma=ls.diag(lsfit(T[,1],x))$std.dev
+  med=c()
+  for (itno in 1:nTrin){
+    res=rep(2*ma,d)
+    lookup=c(1:d)
+    if (length(med)>0){
+      lookup=lookup[-med]
+    }
+    for (i in lookup){ 
+      med1=c(med,i)
+      res[i]=ls.diag(lsfit(T[,med1],x))$std.dev
+    }
+    svek[itno]=min(res)
+    med=c(med,which.min(res))
+    ud=lsfit(T[,med],x)
+    uddiag=ls.diag(ud)
+    betahat=ud$coef
+    sds=uddiag$std.err
+    pval=2*pt(-abs(betahat/sds),n-1-length(med1))
+    pvalvek[itno]=pval[itno+1]
+  }
+  return(data.frame(Variabelnummer=med,Spredningsskoen=svek,Pvalue=pvalvek))
+}
+
+########################################################################
+
+# Funktionen cvForward laver leave one out crossvalidation for forward 
+# selektion i en multipel regressionsmodel.
+# Input er en matrix med værdierne af de forklarende variable, 
+# en vektor x med respons og et antal k, der siger hvor mange led 
+# der skal medtages i forward selektion.
+
+cvForward=function(T,x,k){
+ # Input: matriks T (n rækker, d søjler), vektor x af længde n med responsværdier, 
+ # samt antallet k af variable der inkluderes i forward selektion i hvert 
+ # krydsvalideringsskridt.
+d=dim(T)[2]
+n=length(x)
+Mr=matrix(0,n,k)
+for (i in 1:n){
+ T0=T[-i,]
+ x0=x[-i]
+ res=rep(0,d)
+ for (j in 1:d){
+  res[j]=summary(lm(x0~T0[,j]))$sigma
+ }
+ med=which.min(res)
+ beta=lsfit(T0[,med],x0)$coef
+ Mr[i,1]=(x[i]-sum(beta*c(1,T[i,med])))^2
+ if (k>1){
+ for (j in 2:k){
+  res=rep(10,d)
+  for (r in c(1:d)[-med]){
+   med1=c(med,r)
+   res[r]=ls.diag(lsfit(T0[,med1],x0))$std.dev
+   }
+  med=c(med,which.min(res))
+  beta=lsfit(T0[,med],x0)$coef
+  Mr[i,j]=(x[i]-sum(beta*c(1,T[i,med])))^2  
+ }}
+}
+return(sqrt(apply(Mr,2,sum)/n))
+}
+
+
+########################################################################
+

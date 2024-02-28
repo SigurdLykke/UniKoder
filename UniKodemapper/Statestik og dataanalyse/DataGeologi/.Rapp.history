@@ -1,0 +1,4233 @@
+scan("Alluvialkegle.txt")
+source("/Users/sigurdlykkenielsen/Desktop/UNI/4 år/Statestik /R mappe/DataGeologi/Alluvialkegle.txt")
+scan("Alluvialkegle.txt")
+setwd("/Users/sigurdlykkenielsen/Desktop/UNI/4 a\314\212r/Statestik /R mappe/DataGeologi/")
+getwd()
+scan("Alluvialkegle.txt")
+data=c(scan("Alluvialkegle.txt"))
+qqnorm(data)
+c("Figur er dannet")
+data=c(scan("Alluvialkegle.txt"))#
+hist(data)#
+c("Figur er dannet")
+data=c(scan("Alluvialkegle.txt"))#
+logdata=log(data)#
+hist(logdata)#
+c("Figur er dannet")
+data=c(scan("Alluvialkegle.txt"))#
+logdata=log(data)#
+qqnorm(logdata)#
+c("Figur er dannet")
+data=c(scan("Alluvialkegle.txt"))#
+# Middelværdi er givet som 1 ifølge hypotesen#
+mu <- 1#
+#
+# Estimer standardafvigelsen for kegleforholdene#
+sigma <- sd(data)#
+#
+# Udskriv estimatet for standardafvigelsen#
+print(sigma)
+data=c(scan("Alluvialkegle.txt"))#
+# Middelværdi er givet som 0 ifølge hypotesen#
+mu <- 0#
+#
+# Estimer standardafvigelsen for kegleforholdene#
+sigma <- sd(data)#
+#
+# Udskriv estimatet for standardafvigelsen#
+print(sigma)
+data=c(scan("Alluvialkegle.txt"))#
+# Middelværdi er givet som 0 ifølge hypotesen#
+mu <- 0#
+logdata=log(data)#
+# Estimer standardafvigelsen for kegleforholdene#
+sigma <- sd(logdata)#
+#
+# Udskriv estimatet for standardafvigelsen#
+print(sigma)
+v600=c(579,583,586,601,576,559,609,572,567,587) t . t e s t ( v 6 0 0 , mu= 6 0 0 )
+v600=c(579,583,586,601,576,559,609,572,567,587) #
+t . t e s t ( v 6 0 0 , mu= 6 0 0 )
+data=c(scan("Alluvialkegle.txt"))#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(data)#
+varians_skoen = var(data)#
+spredning_skoen = sd(data)#
+# Beregn 95% konfidensinterval for middelværdien#
+n = length(data)#
+fejlmargin = qt(0.975, df=n-1) * spredning_skoen / sqrt(n)#
+middelvaerdi_ki = c(middelvaerdi_skoen - fejlmargin, middelvaerdi_skoen + fejlmargin)#
+# Beregn 95% konfidensinterval for variansen og standardafvigelsen#
+t0 = qt(0.975,n[1]+n[2]−2) #
+konfInt= middelvaerdi_skoen [1]− middelvaerdi_skoen [2]+c(−1,1)*t0*sqrt(s2*(1/n[1]+1/n[2]))#
+# Saml resultaterne i en tabel#
+resultat_tabel <- data.frame(#
+  Skøn = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Nedre_KI = c(middelvaerdi_ki[1], varians_ki[1], spredning_ki[1]),#
+  Øvre_KI = c(middelvaerdi_ki[2], varians_ki[2], spredning_ki[2])#
+)#
+rownames(resultat_tabel) <- c("Middelværdi", "Varians", "Spredning")#
+# Udskriv tabellen#
+print(resultat_tabel)
+data=c(scan("Alluvialkegle.txt"))#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(data)#
+varians_skoen = var(data)#
+spredning_skoen = sd(data)#
+# Beregn 95% konfidensinterval for middelværdien#
+n = length(data)#
+fejlmargin = qt(0.975, df=n-1) * spredning_skoen / sqrt(n)#
+middelvaerdi_ki = c(middelvaerdi_skoen - fejlmargin, middelvaerdi_skoen + fejlmargin)#
+# Beregn 95% konfidensinterval for variansen og standardafvigelsen#
+t0 = qt(0.975,n[1]+n[2]−2) #
+konfInt= middelvaerdi_skoen [1]− middelvaerdi_skoen [2]+c(−1,1)*t0*sqrt(s2*(1/n[1]+1/n[2]))#
+# Saml resultaterne i en tabel#
+resultat_tabel = data.frame(#
+  Skøn = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Nedre_KI = c(middelvaerdi_ki[1], varians_ki[1], spredning_ki[1]),#
+  Øvre_KI = c(middelvaerdi_ki[2], varians_ki[2], spredning_ki[2])#
+)#
+rownames(resultat_tabel) <- c("Middelværdi", "Varians", "Spredning")#
+# Udskriv tabellen#
+print(resultat_tabel)
+ye
+data=c(scan("Alluvialkegle.txt"))#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(data)#
+varians_skoen = var(data)#
+spredning_skoen = sd(data)#
+# Beregn 95% konfidensinterval for middelværdien#
+n = length(data)#
+fejlmargin = qt(0.975, df=n-1) * spredning_skoen / sqrt(n)#
+middelvaerdi_ki = c(middelvaerdi_skoen - fejlmargin, middelvaerdi_skoen + fejlmargin)#
+# Beregn 95% konfidensinterval for variansen og standardafvigelsen#
+t0 = qt(0.975,n[1]+n[2]−2) #
+konfInt= middelvaerdi_skoen [1]− middelvaerdi_skoen [2]+c(−1,1)*t0*sqrt(s2*(1/n[1]+1/n[2]))#
+# Saml resultaterne i en tabel#
+resultat_tabel = data.frame(#
+  Skøn = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Nedre_KI = c(middelvaerdi_ki[1], varians_ki[1], spredning_ki[1]),#
+  Øvre_KI = c(middelvaerdi_ki[2], varians_ki[2], spredning_ki[2])#
+)#
+rownames(resultat_tabel) <- c("Middelværdi", "Varians", "Spredning")#
+# Udskriv tabellen#
+print(resultat_tabel)
+data=c(scan("Alluvialkegle.txt"))#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(data)#
+varians_skoen = var(data)#
+spredning_skoen = sd(data)#
+# Beregn 95% konfidensinterval for tingene#
+df=length(data)-1#
+konf_middel=sqrt(df*middelvaerdi_skoen ^2/qchisq(c(0.975,0.025),df))#
+#
+konf_varians=sqrt(df* varians_skoen ^2/qchisq(c(0.975,0.025),df))#
+#
+konf_spredning=sqrt(df*spredning_skoen^2/qchisq(c(0.975,0.025),df))#
+# Saml resultaterne i en tabel#
+resultat_tabel = data.frame(#
+  Skøn = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  konf = c(konf_middel, konf_varians, konf_spredning)#
+)#
+rownames(resultat_tabel) <- c("Middelværdi", "Varians", "Spredning")#
+# Udskriv tabellen#
+print(resultat_tabel)
+data = scan("Alluvialkegle.txt")#
+#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(data)#
+varians_skoen = var(data)#
+spredning_skoen = sd(data)#
+#
+# Antallet af observationer#
+n = length(data)#
+df = n - 1#
+#
+# Beregn 95% konfidensinterval for middelværdien ved hjælp af t-fordelingen#
+fejlmargin_middel = qt(0.975, df=df) * spredning_skoen / sqrt(n)#
+konf_middel = c(middelvaerdi_skoen - fejlmargin_middel, middelvaerdi_skoen + fejlmargin_middel)#
+#
+# Beregn 95% konfidensinterval for variansen ved hjælp af chi-kvadratfordelingen#
+chi2_lower = qchisq(0.025, df=df)#
+chi2_upper = qchisq(0.975, df=df)#
+konf_varians = ((n - 1) * varians_skoen) / c(chi2_upper, chi2_lower)#
+#
+# Beregn 95% konfidensinterval for standardafvigelsen baseret på konfidensintervallet for variansen#
+konf_spredning = sqrt(konf_varians)#
+#
+# Opret en data frame for at holde skønnene og konfidensintervallerne#
+resultat_tabel = data.frame(#
+  Skøn = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Nedre_KI = c(konf_middel[1], konf_varians[1], konf_spredning[1]),#
+  Øvre_KI = c(konf_middel[2], konf_varians[2], konf_spredning[2])#
+)#
+rownames(resultat_tabel) <- c("Middelværdi", "Varians", "Standardafvigelse")#
+#
+# Udskriv tabellen#
+print(resultat_tabel)
+ye boi
+data = scan("Alluvialkegle.txt")#
+#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(data)#
+varians_skoen = var(data)#
+spredning_skoen = sd(data)#
+#
+# Antallet af observationer#
+n = length(data)#
+df = n - 1#
+#
+# Beregn 95% konfidensinterval for middelværdien ved hjælp af t-fordelingen#
+fejlmargin_middel = qt(0.975, df=df) * spredning_skoen / sqrt(n)#
+konf_middel = c(middelvaerdi_skoen - fejlmargin_middel, middelvaerdi_skoen + fejlmargin_middel)#
+#
+# Beregn 95% konfidensinterval for variansen ved hjælp af chi-kvadratfordelingen#
+chi2_lower = qchisq(0.025, df=df)#
+chi2_upper = qchisq(0.975, df=df)#
+konf_varians = ((n - 1) * varians_skoen) / c(chi2_upper, chi2_lower)#
+#
+# Beregn 95% konfidensinterval for standardafvigelsen baseret på konfidensintervallet for variansen#
+konf_spredning = sqrt(konf_varians)#
+#
+# Opret en data frame for at holde skønnene og konfidensintervallerne#
+resultat_tabel = data.frame(#
+  Skøn = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Nedre_KI = c(konf_middel[1], konf_varians[1], konf_spredning[1]),#
+  Øvre_KI = c(konf_middel[2], konf_varians[2], konf_spredning[2])#
+)#
+rownames(resultat_tabel) <- c("Middelværdi", "Varians", "Standardafvigelse")#
+#
+# Udskriv tabellen#
+print(resultat_tabel)
+data = scan("Alluvialkegle.txt")#
+#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(data)#
+varians_skoen = var(data)#
+spredning_skoen = sd(data)#
+#
+# Antallet af observationer#
+n = length(data)#
+df = n - 1#
+#
+# Beregn 95% konfidensinterval for middelværdien ved hjælp af t-fordelingen#
+fejlmargin_middel = qt(0.975, df=df) * spredning_skoen / sqrt(n)#
+konf_middel = c(middelvaerdi_skoen - fejlmargin_middel, middelvaerdi_skoen + fejlmargin_middel)#
+#
+# Beregn 95% konfidensinterval for variansen ved hjælp af chi-kvadratfordelingen#
+chi2_lower = qchisq(0.025, df=df)#
+chi2_upper = qchisq(0.975, df=df)#
+konf_varians = ((n - 1) * varians_skoen) / c(chi2_upper, chi2_lower)#
+#
+# Beregn 95% konfidensinterval for standardafvigelsen baseret på konfidensintervallet for variansen#
+konf_spredning = sqrt(konf_varians)#
+#
+# Opret en data frame for at holde skønnene og konfidensintervallerne#
+resultat_tabel = data.frame(#
+  Skoen = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Nedre_KI = c(konf_middel[1], konf_varians[1], konf_spredning[1]),#
+  Øvre_KI = c(konf_middel[2], konf_varians[2], konf_spredning[2])#
+)#
+rownames(resultat_tabel) <- c("Middelværdi", "Varians", "Standardafvigelse")#
+#
+# Udskriv tabellen#
+print(resultat_tabel)
+data = scan("Alluvialkegle.txt")#
+#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(data)#
+varians_skoen = var(data)#
+spredning_skoen = sd(data)#
+#
+# Antallet af observationer#
+n = length(data)#
+df = n - 1#
+#
+# Beregn 95% konfidensinterval for middelværdien ved hjælp af t-fordelingen#
+fejlmargin_middel = qt(0.975, df=df) * spredning_skoen / sqrt(n)#
+konf_middel = c(middelvaerdi_skoen - fejlmargin_middel, middelvaerdi_skoen + fejlmargin_middel)#
+#
+# Beregn 95% konfidensinterval for variansen ved hjælp af chi-kvadratfordelingen#
+chi2_lower = qchisq(0.025, df=df)#
+chi2_upper = qchisq(0.975, df=df)#
+konf_varians = ((n - 1) * varians_skoen) / c(chi2_upper, chi2_lower)#
+#
+# Beregn 95% konfidensinterval for standardafvigelsen baseret på konfidensintervallet for variansen#
+konf_spredning = sqrt(konf_varians)#
+#
+# Opret en data frame for at holde skønnene og konfidensintervallerne#
+resultat_tabel <- data.frame(#
+  Skon = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Nedre_KI = c(konf_middel[1], konf_varians[1], konf_spredning[1]),#
+  Ovre_KI = c(konf_middel[2], konf_varians[2], konf_spredning[2])#
+)#
+rownames(resultat_tabel) <- c("Middelvaerdi", "Varians", "Standardafvigelse")#
+#
+# Udskriv tabellen#
+print(resultat_tabel)
+data = scan("Alluvialkegle.txt")#
+#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(data)#
+varians_skoen = var(data)#
+spredning_skoen = sd(data)#
+#
+# Antallet af observationer#
+n = length(data)#
+df = n - 1#
+#
+# Beregn 95% konfidensinterval for middelværdien ved hjælp af t-fordelingen#
+fejlmargin_middel = qt(0.975, df=df) * spredning_skoen / sqrt(n)#
+konf_middel = c(middelvaerdi_skoen - fejlmargin_middel, middelvaerdi_skoen + fejlmargin_middel)#
+#
+# Beregn 95% konfidensinterval for variansen ved hjælp af chi-kvadratfordelingen#
+chi2_lower = qchisq(0.025, df=df)#
+chi2_upper = qchisq(0.975, df=df)#
+konf_varians = ((n - 1) * varians_skoen) / c(chi2_upper, chi2_lower)#
+#
+# Beregn 95% konfidensinterval for standardafvigelsen baseret på konfidensintervallet for variansen#
+konf_spredning = sqrt(konf_varians)#
+#
+# Opret en data frame for at holde skønnene og konfidensintervallerne#
+resultat_tabel = data.frame(#
+  Skoen = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Nedre_KI = c(konf_middel[1], konf_varians[1], konf_spredning[1]),#
+  Øvre_KI = c(konf_middel[2], konf_varians[2], konf_spredning[2])#
+)#
+rownames(resultat_tabel) <- c("Middelværdi", "Varians", "Standardafvigelse")#
+#
+# Udskriv tabellen#
+print(resultat_tabel)
+data <- scan("Alluvialkegle.txt")#
+#
+# Beregn skønnene#
+middelvaerdi_skoen <- mean(data)#
+varians_skoen <- var(data)#
+spredning_skoen <- sd(data)#
+#
+# Antallet af observationer#
+n <- length(data)#
+df <- n - 1#
+#
+# Beregn 95% konfidensinterval for middelværdien ved hjælp af t-fordelingen#
+fejlmargin_middel <- qt(0.975, df=df) * spredning_skoen / sqrt(n)#
+konf_middel <- c(middelvaerdi_skoen - fejlmargin_middel, middelvaerdi_skoen + fejlmargin_middel)#
+#
+# Beregn 95% konfidensinterval for variansen ved hjælp af chi-kvadratfordelingen#
+chi2_lower <- qchisq(0.025, df=df)#
+chi2_upper <- qchisq(0.975, df=df)#
+konf_varians <- ((n - 1) * varians_skoen) / c(chi2_upper, chi2_lower)#
+#
+# Beregn 95% konfidensinterval for standardafvigelsen baseret på konfidensintervallet for variansen#
+konf_spredning <- sqrt(konf_varians)#
+#
+# Opret en data frame for at holde skønnene og konfidensintervallerne#
+resultat_tabel <- data.frame(#
+  Estimate = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Lower_CI = c(konf_middel[1], konf_varians[1], konf_spredning[1]),#
+  Upper_CI = c(konf_middel[2], konf_varians[2], konf_spredning[2])#
+)#
+rownames(resultat_tabel) <- c("Middelværdi", "Varians", "Standardafvigelse")#
+#
+# Udskriv tabellen#
+print(resultat_tabel)
+data <- scan("Alluvialkegle.txt")#
+#
+# Beregn skønnene#
+middelvaerdi_skoen <- mean(data)#
+varians_skoen <- var(data)#
+spredning_skoen <- sd(data)#
+#
+# Antallet af observationer#
+n <- length(data)#
+df <- n - 1#
+#
+# Beregn 95% konfidensinterval for middelværdien ved hjælp af t-fordelingen#
+fejlmargin_middel <- qt(0.975, df=df) * spredning_skoen / sqrt(n)#
+konf_middel <- c(middelvaerdi_skoen - fejlmargin_middel, middelvaerdi_skoen + fejlmargin_middel)#
+#
+# Beregn 95% konfidensinterval for variansen ved hjælp af chi-kvadratfordelingen#
+chi2_lower <- qchisq(0.025, df=df)#
+chi2_upper <- qchisq(0.975, df=df)#
+konf_varians <- ((n - 1) * varians_skoen) / c(chi2_upper, chi2_lower)#
+#
+# Beregn 95% konfidensinterval for standardafvigelsen baseret på konfidensintervallet for variansen#
+konf_spredning <- sqrt(konf_varians)#
+#
+# Opret en data frame for at holde skønnene og konfidensintervallerne#
+resultat_tabel <- data.frame(#
+  Estimate = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Lower_CI = c(konf_middel[1], konf_varians[1], konf_spredning[1]),#
+  Upper_CI = c(konf_middel[2], konf_varians[2], konf_spredning[2])#
+)#
+rownames(resultat_tabel) <- c("Middelvaerdi", "Varians", "Standardafvigelse")#
+#
+# Udskriv tabellen#
+print(resultat_tabel)
+data = scan("Alluvialkegle.txt")#
+#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(data)#
+varians_skoen = var(data)#
+spredning_skoen = sd(data)#
+#
+# Antallet af observationer#
+n = length(data)#
+df = n - 1#
+#
+# Beregn 95% konfidensinterval for middelværdien ved hjælp af t-fordelingen#
+fejlmargin_middel = qt(0.975, df=df) * spredning_skoen / sqrt(n)#
+konf_middel = c(middelvaerdi_skoen - fejlmargin_middel, middelvaerdi_skoen + fejlmargin_middel)#
+#
+# Beregn 95% konfidensinterval for variansen ved hjælp af chi-kvadratfordelingen#
+chi2_lower = qchisq(0.025, df=df)#
+chi2_upper = qchisq(0.975, df=df)#
+konf_varians = ((n - 1) * varians_skoen) / c(chi2_upper, chi2_lower)#
+#
+# Beregn 95% konfidensinterval for standardafvigelsen baseret på konfidensintervallet for variansen#
+konf_spredning = sqrt(konf_varians)#
+#
+# Opret en data frame for at holde skønnene og konfidensintervallerne#
+resultat_tabel = data.frame(#
+  Estimate = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Lower_CI = c(konf_middel[1], konf_varians[1], konf_spredning[1]),#
+  Upper_CI = c(konf_middel[2], konf_varians[2], konf_spredning[2])#
+)#
+rownames(resultat_tabel) = c("Middelvaerdi", "Varians", "Standardafvigelse")#
+#
+# Udskriv tabellen#
+print(resultat_tabel)
+data = scan("Alluvialkegle.txt")#
+#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(data)#
+varians_skoen = var(data)#
+spredning_skoen = sd(data)#
+#
+# Antallet af observationer#
+n = length(data)#
+df = n - 1#
+#
+# Beregn 95% konfidensinterval for middelværdien ved hjælp af t-fordelingen#
+fejlmargin_middel = qt(0.975, df=df) * spredning_skoen / sqrt(n)#
+konf_middel = c(middelvaerdi_skoen - fejlmargin_middel, middelvaerdi_skoen + fejlmargin_middel)#
+#
+# Beregn 95% konfidensinterval for variansen ved hjælp af chi-kvadratfordelingen#
+chi2_lower = qchisq(0.025, df=df)#
+chi2_upper = qchisq(0.975, df=df)#
+konf_varians = ((n - 1) * varians_skoen) / c(chi2_upper, chi2_lower)#
+#
+# Beregn 95% konfidensinterval for standardafvigelsen baseret på konfidensintervallet for variansen#
+konf_spredning = sqrt(konf_varians)#
+#
+# Opret en data frame for at holde skønnene og konfidensintervallerne#
+resultat_tabel = data.frame(#
+  skoen = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Lower_CI = c(konf_middel[1], konf_varians[1], konf_spredning[1]),#
+  Upper_CI = c(konf_middel[2], konf_varians[2], konf_spredning[2])#
+)#
+rownames(resultat_tabel) = c("Middelvaerdi", "Varians", "Standardafvigelse")#
+#
+# Udskriv tabellen#
+print(resultat_tabel)
+data = scan("Alluvialkegle.txt")#
+#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(data)#
+varians_skoen = var(data)#
+spredning_skoen = sd(data)#
+#
+# Antallet af observationer#
+n = length(data)#
+df = n - 1#
+#
+# Beregn 95% konfidensinterval for middelværdien ved hjælp af t-fordelingen#
+fejlmargin_middel = qt(0.975, df=df) * spredning_skoen / sqrt(n)#
+konf_middel = c(middelvaerdi_skoen - fejlmargin_middel, middelvaerdi_skoen + fejlmargin_middel)#
+#
+# Beregn 95% konfidensinterval for variansen ved hjælp af chi-kvadratfordelingen#
+chi2_lower = qchisq(0.025, df=df)#
+chi2_upper = qchisq(0.975, df=df)#
+konf_varians = ((n - 1) * varians_skoen) / c(chi2_upper, chi2_lower)#
+#
+# Beregn 95% konfidensinterval for standardafvigelsen baseret på konfidensintervallet for variansen#
+konf_spredning = sqrt(konf_varians)#
+#
+# Opret en data frame for at holde skønnene og konfidensintervallerne#
+resultat_tabel = data.frame(#
+  skoen = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Nedre = c(konf_middel[1], konf_varians[1], konf_spredning[1]),#
+  Oevre = c(konf_middel[2], konf_varians[2], konf_spredning[2])#
+)#
+rownames(resultat_tabel) = c("Middelvaerdi", "Varians", "Standardafvigelse")#
+#
+# Udskriv tabellen#
+print(resultat_tabel)
+data = scan("Alluvialkegle.txt")#
+logdata=log(data)#
+#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(logdata)#
+varians_skoen = var(logdata)#
+spredning_skoen = sd(logdata)#
+#
+# Antallet af observationer#
+n = length(logdata)#
+df = n - 1#
+#
+# Beregn 95% konfidensinterval for middelværdien ved hjælp af t-fordelingen#
+fejlmargin_middel = qt(0.975, df=df) * spredning_skoen / sqrt(n)#
+konf_middel = c(middelvaerdi_skoen - fejlmargin_middel, middelvaerdi_skoen + fejlmargin_middel)#
+#
+# Beregn 95% konfidensinterval for variansen ved hjælp af chi-kvadratfordelingen#
+chi2_lower = qchisq(0.025, df=df)#
+chi2_upper = qchisq(0.975, df=df)#
+konf_varians = ((n - 1) * varians_skoen) / c(chi2_upper, chi2_lower)#
+#
+# Beregn 95% konfidensinterval for standardafvigelsen baseret på konfidensintervallet for variansen#
+konf_spredning = sqrt(konf_varians)#
+#
+# Opret en data frame for at holde skønnene og konfidensintervallerne#
+resultat_tabel = data.frame(#
+  skoen = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Nedre = c(konf_middel[1], konf_varians[1], konf_spredning[1]),#
+  Oevre = c(konf_middel[2], konf_varians[2], konf_spredning[2])#
+)#
+rownames(resultat_tabel) = c("Middelvaerdi", "Varians", "Standardafvigelse")#
+#
+# Udskriv tabellen#
+print(resultat_tabel)
+data = scan("Alluvialkegle.txt")#
+logdata=log(data)#
+#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(logdata)#
+varians_skoen = var(logdata)#
+spredning_skoen = sd(logdata)#
+#
+# Antallet af observationer#
+n = length(logdata)#
+df = n - 1#
+#
+# Beregn 95% konfidensinterval for middelværdien ved hjælp af t-fordelingen#
+fejlmargin_middel = qt(0.975, df=df) * spredning_skoen / sqrt(n)#
+konf_middel = c(middelvaerdi_skoen - fejlmargin_middel, middelvaerdi_skoen + fejlmargin_middel)#
+#
+# Beregn 95% konfidensinterval for variansen ved hjælp af chi-kvadratfordelingen#
+chi2_lower = qchisq(0.025, df=df)#
+chi2_upper = qchisq(0.975, df=df)#
+konf_varians = ((n - 1) * varians_skoen) / c(chi2_upper, chi2_lower)#
+#
+# Beregn 95% konfidensinterval for standardafvigelsen baseret på konfidensintervallet for variansen#
+konf_spredning = sqrt(konf_varians)#
+#
+# Opret en data frame for at holde skønnene og konfidensintervallerne#
+resultat_tabel = data.frame(#
+  skoen = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Nedre = c(konf_middel[1], konf_varians[1], konf_spredning[1]),#
+  Oevre = c(konf_middel[2], konf_varians[2], konf_spredning[2])#
+)#
+rownames(resultat_tabel) = c("Middelvaerdi", "Varians", "Standardafvigelse")#
+#
+# Udskriv tabellen#
+print(resultat_tabel)#
+ppnorm(0,middelvaerdi_skoen,konf_middel[2])
+data = scan("Alluvialkegle.txt")#
+logdata=log(data)#
+#
+# Beregn skønnene#
+middelvaerdi_skoen = mean(logdata)#
+varians_skoen = var(logdata)#
+spredning_skoen = sd(logdata)#
+#
+# Antallet af observationer#
+n = length(logdata)#
+df = n - 1#
+#
+# Beregn 95% konfidensinterval for middelværdien ved hjælp af t-fordelingen#
+fejlmargin_middel = qt(0.975, df=df) * spredning_skoen / sqrt(n)#
+konf_middel = c(middelvaerdi_skoen - fejlmargin_middel, middelvaerdi_skoen + fejlmargin_middel)#
+#
+# Beregn 95% konfidensinterval for variansen ved hjælp af chi-kvadratfordelingen#
+chi2_lower = qchisq(0.025, df=df)#
+chi2_upper = qchisq(0.975, df=df)#
+konf_varians = ((n - 1) * varians_skoen) / c(chi2_upper, chi2_lower)#
+#
+# Beregn 95% konfidensinterval for standardafvigelsen baseret på konfidensintervallet for variansen#
+konf_spredning = sqrt(konf_varians)#
+#
+# Opret en data frame for at holde skønnene og konfidensintervallerne#
+resultat_tabel = data.frame(#
+  skoen = c(middelvaerdi_skoen, varians_skoen, spredning_skoen),#
+  Nedre = c(konf_middel[1], konf_varians[1], konf_spredning[1]),#
+  Oevre = c(konf_middel[2], konf_varians[2], konf_spredning[2])#
+)#
+rownames(resultat_tabel) = c("Middelvaerdi", "Varians", "Standardafvigelse")#
+#
+# Udskriv tabellen#
+print(resultat_tabel)#
+pnorm(0,middelvaerdi_skoen,konf_middel[2])
+boxplot(Sepal.Length∼Species,data=iris)
+x=iris$Sepal.Length; art=iris$Species; boxplot(x∼art)
+summary( lm( log(Sepal.Length)∼Species, data=iris ) )
+summary(lm(log(Sepal.Length) ~ Species, data=iris))
+anova(lm(logTid∼1),lm(logTid∼Gruppe))
+anova(lm(logTid ~ 1), lm(logTid ~ Gruppe))
+bartlett.test(Sepal.Length,Species)
+> bartlett.test(Sepal.Length,Species)
+bartlett.test(Sepal.Length,Species)
+bartlett.test(log(Sepal.Length)∼Species, data=iris ))
+bartlett.test(log(Sepal.Length)∼Species, data=iris )
+bartlett.test (log(Sepal.Length)∼Species, data=iris )
+bartlett.test (log(Sepal.Length)~Species, data=iris )
+scan("TEX86.csv")
+Plot("TEX86",Temperatur)
+plot("TEX86",Temperatur)
+logColi=c(scan("TEX86.csv"))#
+lmUD=lm(Temperatur~TEX86)#
+plot(TEX86,Temperatur)#
+abline(lmUD)
+c(scan("TEX86.csv"))
+c(scan("TEX86.csv"))#
+lmUD=lm(Temperatur~TEX86)#
+plot(TEX86,Temperatur)#
+abline(lmUD)
+c(scan("TEX86.csv"))
+c(scan("TEX86.csv"))#
+lmUD=lm(Temperatur~TEX86)#
+plot(TEX86,Temperatur)#
+abline(lmUD)
+read.csv("TEX86.csv")#
+lmUD=lm(Temperatur~TEX86)#
+plot(TEX86,Temperatur)#
+abline(lmUD)
+read.csv("TEX86.csv")#
+lmUD=lm(Temperatur~TEX86)#
+plot(TEX86, Temperatur)#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(Temperatur~TEX86,data=data)#
+plot(data$TEX86, data$Temperatur)#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(Temperatur~TEX86,data=data)#
+plot(data$TEX86, data$Temperatur)#
+ylim=c(0.2,0.9)#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(Temperatur~TEX86,data=data)#
+ylim=c(0.2,0.9)#
+plot(data$TEX86, data$Temperatur)#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(Temperatur~TEX86,data=data)#
+plot(data$TEX86, data$Temperatur,ylim=c(0.2,0.9))#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(Temperatur~TEX86,data=data)#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9))#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9))#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),xtitle("års temp. SST"),ytitle("TEX86 index"))#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="Sammenhæng mellem TEX86 og SST", xlab="Årstemperatur SST", ylab="TEX86 Index")#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="Årstemp. SST", ylab="TEX86 Index")#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="Temp. SST", ylab="TEX86 Index")#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="ÅrTemp. SST", ylab="TEX86 Index")#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="ÅTemp. SST", ylab="TEX86 Index")#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AYTemp. SST", ylab="TEX86 Index")#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp. SST", ylab="TEX86 Index")#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)
+data=read.csv("TEX86.csv")#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(-3.8872,0.8494)#
+abline(-3.8872+2*0.3094,0.8494,lty=3)#
+abline(-3.8872-2*0.3094,0.8494,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskøn=sr)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+# Opstart ovenfor skal være kørt#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(TEX86~Temperatur+2*0.3094,0.8494,lty=3)#
+abline(TEX86~Temperatur-2*0.3094,0.8494,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskøn=sr)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+# Opstart ovenfor skal være kørt#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(TEX86~Temperatur+2*0.3094,lty=3)#
+abline(TEX86~Temperatur-2*0.3094,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskøn=sr)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+# Opstart ovenfor skal være kørt#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(lmUD+2*0.3094,lty=3)#
+abline(lmUD-2*0.3094,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskøn=sr)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+# Opstart ovenfor skal være kørt#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskøn=sr)
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+# Opstart ovenfor skal være kørt#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+# Indlæs data#
+data <- read.csv("TEX86.csv")#
+#
+# Opret en lineær regressionsmodel#
+lmUD <- lm(TEX86 ~ Temperatur, data=data)#
+#
+# Udskriv en opsummering af modellen for at få estimater og konfidensintervaller#
+summary(lmUD)#
+#
+# Beregn og udskriv 95% konfidensintervaller for hældning og skæring#
+confint(lmUD, level=0.95)#
+#
+# Beregn skønnet over spredningen sigma#
+sigma(lmUD)#
+#
+# Plot til modelkontrol#
+par(mfrow=c(2,2))#
+plot(lmUD) # Opretter 4 diagnostiske plots#
+#
+# Tilføjelse af konfidensintervaller til plot#
+predict_interval <- predict(lmUD, interval="confidence")#
+plot(data$Temperatur, data$TEX86, ylim=c(0.2,0.9), main="Sammenhæng mellem TEX86 og SST", xlab="Årstemperatur SST", ylab="TEX86 Index")#
+matlines(data$Temperatur, predict_interval, lty=c(1,2,2), col = "blue")#
+#
+# Gendan standard plot layout#
+par(mfrow=c(1,1))
+YEA BUDDY
+data=read.csv("TEX86.csv")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+# Opstart ovenfor skal være kørt#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+Yehaw
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(TEX86~Temperatur,data=data)#
+abline(TEX86+2*0.3094,Temperatur,lty=3)#
+abline(TEX86-2*0.3094,Temperatur,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+abline(TEX86~Temperatur,data=data)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(TEX86~Temperatur,data=data)#
+abline(TEX86+2*0.3094,Temperatur,lty=3)#
+abline(TEX86-2*0.3094,Temperatur,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(data$TEX86~data$Temperatur,data=data)#
+abline(data$TEX86+2*0.3094,data$Temperatur,lty=3)#
+abline(data$TEX86-2*0.3094,data$Temperatur,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(data$TEX86~data$Temperatur,data=data)#
+abline(data$TEX86+2,data$Temperatur,lty=3)#
+abline(data$TEX86-2,data$Temperatur,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(data$TEX86~data$Temperatur,data=data)#
+abline(data$Temperatur+2,data$TEX86,lty=3)#
+abline(data$Temperatur-2,data$TEX86,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(lmUD+4,lty=3)#
+abline(lmUD-4,lty=3)#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(lmUD+4,0,lty=3)#
+abline(lmUD-4,0,lty=3)#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(data$TEX86+4,0,lty=3)#
+abline(data$TEX86-4,0,lty=3)#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(data$TEX86+4,data$Temperatur,lty=3)#
+abline(data$TEX86-4,data$Temperatur,lty=3)#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(data$TEX86+,data$Temperatur,lty=3)#
+abline(data$TEX86-,data$Temperatur,lty=3)#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(0.2729408+2*0.0197926, 0.0155514,lty=3)#
+abline(0.2729408-2*0.0197926, 0.0155514,lty=3)#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(98-2))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+dfg=tapply (data$Temperatur,data$TEX86,length)−1
+data=read.csv("TEX86.csv")#
+dfg=tapply (data$Temperatur,data$TEX86,length)-1
+dfg
+data=read.csv("TEX86.csv")#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+konfint(lmUD)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+source("/Users/sigurdlykkenielsen/Desktop/UNI/4 år/Statestik /R mappe/DataGeologi/Rfunktioner.txt")
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+konfint(lmUD)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+confint(lmUD)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(confint(lmUD),lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+confint=confint(lmUD)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr,konfidensinterval=confint)
+konfidensinterval=confint
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+confint=confint(lmUD)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+konfidensinterval=confint
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+confint=confint(lmUD)#
+konfidensinterval=confint#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+c(konfidensinterval)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+confint=confint(lmUD)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+confint(lmUD)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+#Konfidensinterval#
+confint(lmUD)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+#Konfidensinterval#
+confint(lmUD)#
+#
+sumUD$sigma#
+sumUD$df[2]#
+sumUD$coefficients#
+lmUD$fitted.values#
+lmUD$residuals#
+confint(lmUD)
+yoyoyo
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+#Konfidensinterval#
+confint(lmUD)#
+#
+sumUD$sigma#
+sumUD$df[2]#
+sumUD$coefficients#
+lmUD$fitted.values#
+lmUD$residuals#
+confint(lmUD)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+#Konfidensinterval#
+confint(lmUD)#
+#
+#Summary#
+summary(lmUD)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes og to figurer dannes#
+r=lmUD$residuals#
+par(mfrow=c(1,2))#
+#
+# residualplot dannes#
+plot(logColi,r,xlab="LogColi",ylab="Residualer")#
+abline(0,0)#
+#
+# qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+#
+# udskrift#
+list(su=su,ci=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes og to figurer dannes#
+r=lmUD$residuals#
+par(mfrow=c(1,2))#
+#
+# residualplot dannes#
+plot(data$Temperatur,r,xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+#
+# udskrift#
+list(su=su,ci=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes og to figurer dannes#
+r=lmUD$residuals#
+par(mfrow=c(1,2))#
+#
+# residualplot dannes#
+plot(data$Temperatur,r,xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(lmUD)#
+#
+# qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+#
+# udskrift#
+list(su=su,ci=ci)
+frik
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes og to figurer dannes#
+r=lmUD$residuals#
+par(mfrow=c(1,2))#
+#
+# residualplot dannes#
+plot(data$Temperatur,r,xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(lmUD)#
+#
+# qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+#
+# udskrift#
+list(su=su,ci=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+lmUD=lm(TEX86~Temperatur,data=data)#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes og to figurer dannes#
+r=lmUD$residuals#
+par(mfrow=c(1,2,3))#
+#
+# residualplot dannes#
+plot(data$Temperatur,r,xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(lmUD)#
+#
+# qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+#
+# udskrift#
+list(su=su,ci=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes og to figurer dannes#
+r=lmUD$residuals#
+par(mfrow=c(1,2))#
+#
+# residualplot dannes#
+plot(data$Temperatur,r,xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(lmUD)#
+#
+# qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+#
+# udskrift#
+list(su=su,ci=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+lmUD=lm(TEX86~Temperatur,data=data)#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes og to figurer dannes#
+r=lmUD$residuals#
+par(mfrow=c(1,2))#
+#
+# residualplot dannes#
+plot(data$Temperatur,r,xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(lmUD)#
+#
+# qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+#
+# udskrift#
+list(su=su,ci=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes og to figurer dannes#
+r=lmUD$residuals#
+par(mfrow=c(1,2))#
+#
+# residualplot dannes#
+plot(data$Temperatur,r,xlab="temp",ylab="Residualer")#
+abline(lmUD)#
+#
+# qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline(lmUD)#
+#
+# udskrift#
+list(su=su,ci=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes og to figurer dannes#
+r=lmUD$residuals#
+par(mfrow=c(1,2))#
+#
+# residualplot dannes#
+plot(data$Temperatur,r,xlab="temp",ylab="Residualer")#
+abline(lmUD)#
+text(0.03,1010,pos=4,labels=round(summary(lmUD)$r.squared,2))#
+# qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+#
+# udskrift#
+list(su=su,ci=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+#Konfidensinterval#
+confint(lmUD)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+par(mfrow=c(1,2,3))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes og to figurer dannes#
+r=lmUD$residuals#
+#
+# residualplot dannes#
+plot(data$Temperatur,r,xlab="Temperatur",ylab="Residualer")#
+abline(0,0)#
+#
+# qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+#
+# udskrift#
+list(su=su,ci=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+par(mfrow=c(1,2))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes og to figurer dannes#
+r=lmUD$residuals#
+#
+# residualplot dannes#
+plot(data$Temperatur,r,xlab="Temperatur",ylab="Residualer")#
+abline(0,0)#
+#
+# qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+#
+# udskrift#
+list(su=su,ci=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+#Konfidensinterval#
+confint(lmUD)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+#Konfidensinterval og summary#
+ci=confint(lmUD)#
+su=summary(lmUD)#
+list(su=su,ci=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+#Konfidensinterval og summary#
+ci=confint(lmUD)#
+su=summary(lmUD)#
+list(summary=su,konfinterval=ci)
+wat
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+#Konfidensinterval og summary#
+ci=confint(lmUD)#
+su=summary(lmUD)#
+list(su=su,ci=ci)#
+# Opstart ovenfor skal være kørt#
+#
+# regressionsmodel analyseres#
+#
+# residualer findes og to figurer dannes#
+r=lmUD$residuals#
+par(mfrow=c(2,2))#
+#
+# residualplot dannes#
+plot(data$Temperatur,r,xlab="Temperatur",ylab="Residualer")#
+abline(0,0)#
+#
+# qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+#
+# udskrift#
+list(su=su,ci=ci)
+wat
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# figur dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+#Konfidensinterval og summary defineres#
+ci=confint(lmUD)#
+su=summary(lmUD)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+#Konfidensinterval og summary udskrives#
+list(summary=su,konfinterval=ci)
+# Opstart ovenfor skal være kørt#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1: TEX86 vs SST med regressionslinje og konfidensbånd#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,xlab="Temperatur",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# udskrift#
+list(su=su,ci=ci)
+# Opstart ovenfor skal være kørt#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1: TEX86 vs SST med regressionslinje og konfidensbånd#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline(lmUD)#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# udskrift#
+list(su=su,ci=ci)
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1: TEX86 vs SST med regressionslinje og konfidensbånd#
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# udskrift#
+list(su=su,ci=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+# udskrift#
+list(su=su,ci=ci)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+yehaw
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+# udskrift#
+list(su=su,ci=ci)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+# udskrift#
+list(summary=su,confidensinterval=ci)#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)
+# Indlæs data fra en csv-fil#
+data=read.csv("Rockies.csv")#
+#
+# Dan variablene logLaeng og logBred med logaritmen til indholdet af de to søjler#
+logLaeng=log(data$Laeng)#
+logBred=log(data$Bred)#
+#
+# Lav en figur, hvor logBred tegnes op mod logLaeng#
+plot(logLaeng, logBred, xlab = "log(Laeng)", ylab = "log(Bred)")#
+#
+# Er det rimeligt at sige, at der er en lineær sammenhæng mellem de to variable?#
+# Vi kan bruge en lineær regressionsmodel til at teste dette#
+model= lm(logBred ~ logLaeng, data = data)#
+#
+# Vi kan se på modelsummaryen for at se, om hældningen er signifikant forskellig fra nul#
+summary(model)#
+#
+# Vi kan også se på et spredningsdiagram med regressionslinjen tilføjet#
+abline(model, col = "red")
+# Indlæs data fra en csv-fil#
+data=read.csv("Rockies.csv")#
+#
+logLaeng=log(data$Laeng)#
+logBred=log(data$Bred)#
+plot(logLaeng, logBred, xlab = "log(Laeng)", ylab = "log(Bred)")#
+#
+model= lm(logBred ~ logLaeng, data = data)#
+#
+summary(model)#
+#
+abline(model, col = "red")
+read.csv("Rockies.csv")
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+# Assign new names to the data #
+names(data) = c("y_aksen", "x_aksen") #
+# Use the new names in your code #
+lmUD = lm(y_aksen ~ x_aksen, data = data)#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((y_aksen-mean(y_aksen))*(x_aksen-mean(x_aksen)))/#
+sum((x_aksen-mean(x_aksen))^2)#
+alphahat=mean(y_aksen)-betahat*mean(x_aksen)#
+sr=sqrt(sum((y_aksen-(alphahat+betahat*x_aksen))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(x_aksen,y_aksen,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(x_aksen,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+# Use the new names in your code #
+lmUD = lm(y_aksen ~ x_aksen, data = data)#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((y_aksen-mean(y_aksen))*(x_aksen-mean(x_aksen)))/#
+sum((x_aksen-mean(x_aksen))^2)#
+alphahat=mean(y_aksen)-betahat*mean(x_aksen)#
+sr=sqrt(sum((y_aksen-(alphahat+betahat*x_aksen))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(x_aksen,y_aksen,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(x_aksen,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+# Assign new names to the data #
+names(data) = c("y_aksen", "x_aksen")
+data=read.csv("TEX86.csv")#
+# Assign new names to the data #
+names(data) = c("y_aksen", "x_aksen") #
+# Use the new names in your code #
+lmUD = lm(y_aksen ~ x_aksen, data = data)#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((y_aksen-mean(y_aksen))*(x_aksen-mean(x_aksen)))/#
+sum((x_aksen-mean(x_aksen))^2)#
+alphahat=mean(y_aksen)-betahat*mean(x_aksen)#
+sr=sqrt(sum((y_aksen-(alphahat+betahat*x_aksen))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(x_aksen,y_aksen,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(x_aksen,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+yehaw
+data=read.csv("TEX86.csv")#
+# Assign new names to the data #
+names(data) = c("y_aksen", "x_aksen") #
+# Use the new names in your code #
+lmUD = lm(y_aksen ~ x_aksen, data = data)#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((y_aksen-mean(y_aksen))*(x_aksen-mean(x_aksen)))/#
+sum((x_aksen-mean(x_aksen))^2)#
+alphahat=mean(y_aksen)-betahat*mean(x_aksen)#
+sr=sqrt(sum((y_aksen-(alphahat+betahat*x_aksen))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(x_aksen,y_aksen,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(x_aksen,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+# Assign new names to the data #
+names(data) <- c("y_aksen", "x_aksen") #
+# Use the new names in your code #
+lmUD = lm(y_aksen ~ x_aksen, data = data)#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((y_aksen-mean(y_aksen))*(x_aksen-mean(x_aksen)))/#
+sum((x_aksen-mean(x_aksen))^2)#
+alphahat=mean(y_aksen)-betahat*mean(x_aksen)#
+sr=sqrt(sum((y_aksen-(alphahat+betahat*x_aksen))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet med ylim=c(0.2,0.9), og lavet generelt med variabler istedet for tal som i 5.2) #
+plot(x_aksen,y_aksen,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(x_aksen,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+names(data) <- c("y_aksen", "x_aksen") # Use the new names in your code #
+lmUD <- lm(y_aksen ~ x_aksen, data = data)#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$y_aksen-mean(data$y_aksen))*(data$x_aksen-mean(data$x_aksen)))/#
+sum((data$x_aksen-mean(data$x_aksen))^2)#
+alphahat=mean(data$y_aksen)-betahat*mean(data$x_aksen)#
+sr=sqrt(sum((data$y_aksen-(alphahat+betahat*data$x_aksen))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$x_aksen,data$y_aksen,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$x_aksen,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+yehaw
+data=read.csv("TEX86.csv")#
+names(data) <- c("y_aksen", "x_aksen") # Use the new names in your code #
+lmUD <- lm(y_aksen ~ x_aksen, data = data)#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$y_aksen-mean(data$y_aksen))*(data$x_aksen-mean(data$x_aksen)))/#
+sum((data$x_aksen-mean(data$x_aksen))^2)#
+alphahat=mean(data$y_aksen)-betahat*mean(data$x_aksen)#
+sr=sqrt(sum((data$y_aksen-(alphahat+betahat*data$x_aksen))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$x_aksen,data$y_aksen,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$x_aksen,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+#
+#Data navngives og den naturlige logaritme tages til data.#
+names(data) <- c("y_aksen", "x_aksen") # #
+lmUD <- lm(y_aksen ~ x_aksen, data = data)#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-length(coef(data))#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$y_aksen-mean(data$y_aksen))*(data$x_aksen-mean(data$x_aksen)))/#
+sum((data$x_aksen-mean(data$x_aksen))^2)#
+alphahat=mean(data$y_aksen)-betahat*mean(data$x_aksen)#
+sr=sqrt(sum((data$y_aksen-(alphahat+betahat*data$x_aksen))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$x_aksen,data$y_aksen,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$x_aksen,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+yo
+data=read.csv("TEX86.csv")#
+#
+#Data navngives og den naturlige logaritme tages til data.#
+names(data) <- c("y_aksen", "x_aksen") # #
+lmUD <- lm(y_aksen ~ x_aksen, data = data)#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-length(coef(data))#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$y_aksen-mean(data$y_aksen))*(data$x_aksen-mean(data$x_aksen)))/#
+sum((data$x_aksen-mean(data$x_aksen))^2)#
+alphahat=mean(data$y_aksen)-betahat*mean(data$x_aksen)#
+sr=sqrt(sum((data$y_aksen-(alphahat+betahat*data$x_aksen))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$x_aksen,data$y_aksen,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$x_aksen,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+#
+#Data navngives og den naturlige logaritme tages til data.#
+names(data) <- c("y_aksen", "x_aksen") # #
+lmUD <- lm(y_aksen ~ x_aksen, data = data)#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-length(coef(lmUD))#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$y_aksen-mean(data$y_aksen))*(data$x_aksen-mean(data$x_aksen)))/#
+sum((data$x_aksen-mean(data$x_aksen))^2)#
+alphahat=mean(data$y_aksen)-betahat*mean(data$x_aksen)#
+sr=sqrt(sum((data$y_aksen-(alphahat+betahat*data$x_aksen))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$x_aksen,data$y_aksen,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$x_aksen,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+#
+#Data navngives og den naturlige logaritme tages til data.#
+names(data) <- c("y_aksen", "x_aksen") # #
+lmUD <- lm(y_aksen ~ x_aksen, data = data)#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-length(data)#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$y_aksen-mean(data$y_aksen))*(data$x_aksen-mean(data$x_aksen)))/#
+sum((data$x_aksen-mean(data$x_aksen))^2)#
+alphahat=mean(data$y_aksen)-betahat*mean(data$x_aksen)#
+sr=sqrt(sum((data$y_aksen-(alphahat+betahat*data$x_aksen))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$x_aksen,data$y_aksen,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$x_aksen,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+df=nrow(data)-2
+data=read.csv("TEX86.csv")#
+#
+#Data navngives og den naturlige logaritme tages til data.#
+names(data) <- c("y_aksen", "x_aksen") # #
+lmUD <- lm(y_aksen ~ x_aksen, data = data)#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$y_aksen-mean(data$y_aksen))*(data$x_aksen-mean(data$x_aksen)))/#
+sum((data$x_aksen-mean(data$x_aksen))^2)#
+alphahat=mean(data$y_aksen)-betahat*mean(data$x_aksen)#
+sr=sqrt(sum((data$y_aksen-(alphahat+betahat*data$x_aksen))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$x_aksen,data$y_aksen,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$x_aksen,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+#
+#Data navngives og den naturlige logaritme tages til data.#
+names(data) <- c("y_aksen", "x_aksen") # #
+lmUD <- lm(y_aksen ~ x_aksen, data = data)#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$y_aksen-mean(data$y_aksen))*(data$x_aksen-mean(data$x_aksen)))/#
+sum((data$x_aksen-mean(data$x_aksen))^2)#
+alphahat=mean(data$y_aksen)-betahat*mean(data$x_aksen)#
+sr=sqrt(sum((data$y_aksen-(alphahat+betahat*data$x_aksen))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$x_aksen,data$y_aksen,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$x_aksen,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv") # Indlæser datasættet#
+#
+# Antager at første kolonne er afhængig variabel (y) og anden kolonne er uafhængig variabel (x)#
+y_var_name <- names(data)[1]#
+x_var_name <- names(data)[2]#
+#
+# Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# Linear model beregnes med datasættets faktiske kolonnenavne#
+lmUD <- lm(formula = paste(y_var_name, "~", x_var_name), data = data)#
+#
+# Estimerede linje og statistikker beregnes#
+betahat = coef(lmUD)[2]#
+alphahat = coef(lmUD)[1]#
+sr = sqrt(sum(resid(lmUD)^2) / df)#
+#
+# Regressionsmodel analyseres#
+su = summary(lmUD)#
+ci = confint(lmUD)#
+#
+# Residualer findes#
+r = lmUD$residuals#
+#
+# Opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# Figur 1: Scatter plot med regressionslinje#
+plot(data[[x_var_name]], data[[y_var_name]], main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat, lty=3)#
+abline(alphahat-2*sr, betahat, lty=3)#
+#
+# Figur 2: Residual plot#
+plot(data[[x_var_name]], r, main="Residualer vs SST", xlab="AvgYrTemp SST", ylab="Residualer")#
+abline(0, 0)#
+#
+# Figur 3: QQ-plot af residualer#
+qqnorm(r, ylab="Residualer")#
+abline()#
+#
+# Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# Parameterskøn udskrives#
+c(betahat=betahat, alphahat=alphahat, spredningsskoen=sr)#
+#
+# Udskrift#
+list(summary=su, confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv") # Indlæser datasættet#
+#
+# Antager at første kolonne er afhængig variabel (y) og anden kolonne er uafhængig variabel (x)#
+y_var_name <- names(data)[1]#
+x_var_name <- names(data)[2]#
+#
+# Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# Linear model beregnes med datasættets faktiske kolonnenavne#
+lmUD <- lm(formula = paste(y_var_name, "~", x_var_name), data = data)#
+#
+# Estimerede linje og statistikker beregnes#
+betahat = coef(lmUD)[2]#
+alphahat = coef(lmUD)[1]#
+sr = sqrt(sum(resid(lmUD)^2) / df)#
+#
+# Regressionsmodel analyseres#
+su = summary(lmUD)#
+ci = confint(lmUD)#
+#
+# Residualer findes#
+r = lmUD$residuals#
+#
+# Opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# Figur 1: Scatter plot med regressionslinje#
+plot(data[[x_var_name]], data[[y_var_name]], main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat, lty=3)#
+abline(alphahat-2*sr, betahat, lty=3)#
+#
+# Figur 2: Residual plot#
+plot(data[[x_var_name]], r, main="Residualer vs SST", xlab="AvgYrTemp SST", ylab="Residualer")#
+abline(0, 0)#
+#
+# Figur 3: QQ-plot af residualer#
+qqnorm(r, ylab="Residualer")#
+abline()#
+#
+# Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# Parameterskøn udskrives#
+c(betahat=betahat, alphahat=alphahat, spredningsskoen=sr)#
+#
+# Udskrift#
+list(summary=su, confidensinterval=ci)
+data=read.csv("TEX86.csv") # Indlæser datasættet#
+#
+# Antager at første kolonne er afhængig variabel (y) og anden kolonne er uafhængig variabel (x)#
+y_var_name <- names(data)[1]#
+x_var_name <- names(data)[2]#
+#
+# Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+# Linear model beregnes med datasættets faktiske kolonnenavne#
+lmUD <- lm(formula = paste(y_var_name, "~", x_var_name), data = data)#
+#
+# Estimerede linje og statistikker beregnes#
+betahat = coef(lmUD)[2]#
+alphahat = coef(lmUD)[1]#
+sr = sqrt(sum(resid(lmUD)^2) / df)#
+#
+# Regressionsmodel analyseres#
+su = summary(lmUD)#
+ci = confint(lmUD)#
+#
+# Residualer findes#
+r = lmUD$residuals#
+#
+# Opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# Figur 1: Scatter plot med regressionslinje#
+plot(data[[x_var_name]], data[[y_var_name]], main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat, lty=3)#
+abline(alphahat-2*sr, betahat, lty=3)#
+#
+# Figur 2: Residual plot#
+plot(data[[x_var_name]], r, main="Residualer vs SST", xlab="AvgYrTemp SST", ylab="Residualer")#
+abline(0, 0)#
+#
+# Figur 3: QQ-plot af residualer#
+qqnorm(r, ylab="Residualer")#
+abline()#
+#
+# Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# Parameterskøn udskrives#
+c(betahat=betahat, alphahat=alphahat, spredningsskoen=sr)#
+#
+# Udskrift#
+list(summary=su, confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+# Funktion til at udføre analyser med generelle akse navne#
+filnavn=TEX86.csv#
+analyserData <- function(filnavn, andenakse, førsteakse) {#
+  data <- read.csv(filnavn)#
+  # Frihedsgrader udregnes#
+  df <- nrow(data) - 2#
+  # Linear model anvender dynamiske kolonnenavne#
+  lmUD <- lm(as.formula(paste(andenakse, "~", førsteakse)), data = data)#
+  # Estimerede linje beregnes#
+  betahat <- sum((data[[andenakse]] - mean(data[[andenakse]])) * (data[[førsteakse]] - mean(data[[førsteakse]]))) /#
+    sum((data[[førsteakse]] - mean(data[[førsteakse]]))^2)#
+  alphahat <- mean(data[[andenakse]]) - betahat * mean(data[[førsteakse]])#
+  sr <- sqrt(sum((data[[andenakse]] - (alphahat + betahat * data[[førsteakse]]))^2) / df)#
+  # Regressionsmodel analyseres#
+  su <- summary(lmUD)#
+  ci <- confint(lmUD)#
+  # Residualer findes#
+  r <- lmUD$residuals#
+  # Opretter et 2x2 layout af grafer#
+  par(mfrow = c(2, 2))#
+  # Figur 1 dannes#
+  plot(data[[førsteakse]], data[[andenakse]], ylim = c(0.2, 0.9), main = paste(andenakse, "vs", førsteakse), #
+       xlab = paste("AvgYr", førsteakse), ylab = andenakse)#
+  abline(lmUD)#
+  abline(alphahat + 2 * sr, betahat, lty = 3)#
+  abline(alphahat - 2 * sr, betahat, lty = 3)#
+  # Figur 2: Residualplot#
+  plot(data[[førsteakse]], r, main = "Residualer vs SST", xlab = paste("AvgYr", førsteakse), ylab = "Residualer")#
+  abline(0, 0)#
+  # Figur 3: QQplot af residualer#
+  qqnorm(r, ylab = "Residualer")#
+  abline()#
+  # Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+  plot.new()#
+  # Parameterskøn udskrives#
+  print(c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr))#
+  # Udskrift#
+  list(summary = su, confidensinterval = ci)#
+}#
+#
+# Eksempel på brug af funktionen#
+analyserData("TEX86.csv", "andenakse", "førsteakse")
+# Funktion til at udføre analyser med generelle akse navne#
+filnavn="TEX86.csv"#
+analyserData <- function(filnavn, andenakse, foersteakse) {#
+  data <- read.csv(filnavn)#
+  # Frihedsgrader udregnes#
+  df <- nrow(data) - 2#
+  # Linear model anvender dynamiske kolonnenavne#
+  lmUD <- lm(as.formula(paste(andenakse, "~", foersteakse)), data = data)#
+  # Estimerede linje beregnes#
+  betahat <- sum((data[[andenakse]] - mean(data[[andenakse]])) * (data[[førsteakse]] - mean(data[[foersteakse]]))) /#
+    sum((data[[foersteakse]] - mean(data[[foersteakse]]))^2)#
+  alphahat <- mean(data[[andenakse]]) - betahat * mean(data[[foersteakse]])#
+  sr <- sqrt(sum((data[[andenakse]] - (alphahat + betahat * data[[foersteakse]]))^2) / df)#
+  # Regressionsmodel analyseres#
+  su <- summary(lmUD)#
+  ci <- confint(lmUD)#
+  # Residualer findes#
+  r <- lmUD$residuals#
+  # Opretter et 2x2 layout af grafer#
+  par(mfrow = c(2, 2))#
+  # Figur 1 dannes#
+  plot(data[[foersteakse]], data[[andenakse]], ylim = c(0.2, 0.9), main = paste(andenakse, "vs", foersteakse), #
+       xlab = paste(foersteakse), ylab = andenakse)#
+  abline(lmUD)#
+  abline(alphahat + 2 * sr, betahat, lty = 3)#
+  abline(alphahat - 2 * sr, betahat, lty = 3)#
+  # Figur 2: Residualplot#
+  plot(data[[førsteakse]], r, main = paste("Residualer vs", foersteakse),, xlab = paste(førsteakse), ylab = "Residualer")#
+  abline(0, 0)#
+  # Figur 3: QQplot af residualer#
+  qqnorm(r, ylab = "Residualer")#
+  abline()#
+  # Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+  plot.new()#
+  # Parameterskøn udskrives#
+  print(c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr))#
+  # Udskrift#
+  list(summary = su, confidensinterval = ci)#
+}#
+#
+# Eksempel på brug af funktionen#
+analyserData("TEX86.csv", "andenakse", "førsteakse")
+# Funktion til at udføre analyser med generelle akse navne#
+filnavn="TEX86.csv"#
+analyserData <- function(filnavn, andenakse, foersteakse) {#
+  data <- read.csv(filnavn)#
+  # Frihedsgrader udregnes#
+  df <- nrow(data) - 2#
+  # Linear model anvender dynamiske kolonnenavne#
+  lmUD <- lm(as.formula(paste(andenakse, "~", foersteakse)), data = data)#
+  # Estimerede linje beregnes#
+  betahat <- sum((data[[andenakse]] - mean(data[[andenakse]])) * (data[[foersteakse]] - mean(data[[foersteakse]]))) /#
+    sum((data[[foersteakse]] - mean(data[[foersteakse]]))^2)#
+  alphahat <- mean(data[[andenakse]]) - betahat * mean(data[[foersteakse]])#
+  sr <- sqrt(sum((data[[andenakse]] - (alphahat + betahat * data[[foersteakse]]))^2) / df)#
+  # Regressionsmodel analyseres#
+  su <- summary(lmUD)#
+  ci <- confint(lmUD)#
+  # Residualer findes#
+  r <- lmUD$residuals#
+  # Opretter et 2x2 layout af grafer#
+  par(mfrow = c(2, 2))#
+  # Figur 1 dannes#
+  plot(data[[foersteakse]], data[[andenakse]], ylim = c(0.2, 0.9), main = paste(andenakse, "vs", foersteakse), #
+       xlab = paste(foersteakse), ylab = andenakse)#
+  abline(lmUD)#
+  abline(alphahat + 2 * sr, betahat, lty = 3)#
+  abline(alphahat - 2 * sr, betahat, lty = 3)#
+  # Figur 2: Residualplot#
+  plot(data[[førsteakse]], r, main = paste("Residualer vs", foersteakse),, xlab = paste(foersteakse), ylab = "Residualer")#
+  abline(0, 0)#
+  # Figur 3: QQplot af residualer#
+  qqnorm(r, ylab = "Residualer")#
+  abline()#
+  # Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+  plot.new()#
+  # Parameterskøn udskrives#
+  print(c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr))#
+  # Udskrift#
+  list(summary = su, confidensinterval = ci)#
+}#
+#
+# Eksempel på brug af funktionen#
+analyserData("TEX86.csv", "andenakse", "foersteakse")
+# Funktion til at udføre analyser med generelle akse navne#
+filnavn=TEX86.csv#
+analyserData <- function(filnavn, andenakse, foersteakse) {#
+  data <- read.csv("filnavn")#
+  # Frihedsgrader udregnes#
+  df <- nrow(data) - 2#
+  # Linear model anvender dynamiske kolonnenavne#
+  lmUD <- lm(as.formula(paste(andenakse, "~", foersteakse)), data = data)#
+  # Estimerede linje beregnes#
+  betahat <- sum((data[[andenakse]] - mean(data[[andenakse]])) * (data[[foersteakse]] - mean(data[[foersteakse]]))) /#
+    sum((data[[foersteakse]] - mean(data[[foersteakse]]))^2)#
+  alphahat <- mean(data[[andenakse]]) - betahat * mean(data[[foersteakse]])#
+  sr <- sqrt(sum((data[[andenakse]] - (alphahat + betahat * data[[foersteakse]]))^2) / df)#
+  # Regressionsmodel analyseres#
+  su <- summary(lmUD)#
+  ci <- confint(lmUD)#
+  # Residualer findes#
+  r <- lmUD$residuals#
+  # Opretter et 2x2 layout af grafer#
+  par(mfrow = c(2, 2))#
+  # Figur 1 dannes#
+  plot(data[[foersteakse]], data[[andenakse]], ylim = c(0.2, 0.9), main = paste(andenakse, "vs", foersteakse), #
+       xlab = paste(foersteakse), ylab = andenakse)#
+  abline(lmUD)#
+  abline(alphahat + 2 * sr, betahat, lty = 3)#
+  abline(alphahat - 2 * sr, betahat, lty = 3)#
+  # Figur 2: Residualplot#
+  plot(data[[førsteakse]], r, main = paste("Residualer vs", foersteakse),, xlab = paste(foersteakse), ylab = "Residualer")#
+  abline(0, 0)#
+  # Figur 3: QQplot af residualer#
+  qqnorm(r, ylab = "Residualer")#
+  abline()#
+  # Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+  plot.new()#
+  # Parameterskøn udskrives#
+  print(c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr))#
+  # Udskrift#
+  list(summary = su, confidensinterval = ci)#
+}#
+#
+# Eksempel på brug af funktionen#
+analyserData("TEX86.csv", "andenakse", "foersteakse")
+yeboy
+# Funktion til at udføre analyser med generelle akse navne#
+filnavn=TEX86.csv#
+analyserData <- function(filnavn, andenakse, foersteakse) {#
+  data <- read.csv("filnavn")#
+  # Frihedsgrader udregnes#
+  df <- nrow(data) - 2#
+  # Linear model anvender dynamiske kolonnenavne#
+  lmUD <- lm(as.formula(paste(andenakse, "~", foersteakse)), data = data)#
+  # Estimerede linje beregnes#
+  betahat <- sum((data[[andenakse]] - mean(data[[andenakse]])) * (data[[foersteakse]] - mean(data[[foersteakse]]))) /#
+    sum((data[[foersteakse]] - mean(data[[foersteakse]]))^2)#
+  alphahat <- mean(data[[andenakse]]) - betahat * mean(data[[foersteakse]])#
+  sr <- sqrt(sum((data[[andenakse]] - (alphahat + betahat * data[[foersteakse]]))^2) / df)#
+  # Regressionsmodel analyseres#
+  su <- summary(lmUD)#
+  ci <- confint(lmUD)#
+  # Residualer findes#
+  r <- lmUD$residuals#
+  # Opretter et 2x2 layout af grafer#
+  par(mfrow = c(2, 2))#
+  # Figur 1 dannes#
+  plot(data[[foersteakse]], data[[andenakse]], ylim = c(0.2, 0.9), main = paste(andenakse, "vs", foersteakse), #
+       xlab = paste(foersteakse), ylab = andenakse)#
+  abline(lmUD)#
+  abline(alphahat + 2 * sr, betahat, lty = 3)#
+  abline(alphahat - 2 * sr, betahat, lty = 3)#
+  # Figur 2: Residualplot#
+  plot(data[[førsteakse]], r, main = paste("Residualer vs", foersteakse),, xlab = paste(foersteakse), ylab = "Residualer")#
+  abline(0, 0)#
+  # Figur 3: QQplot af residualer#
+  qqnorm(r, ylab = "Residualer")#
+  abline()#
+  # Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+  plot.new()#
+  # Parameterskøn udskrives#
+  print(c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr))#
+  # Udskrift#
+  list(summary = su, confidensinterval = ci)#
+}#
+#
+# Eksempel på brug af funktionen#
+analyserData("TEX86.csv", "andenakse", "foersteakse")
+# Funktion til at udføre analyser med generelle akse navne#
+filnavn=TEX86.csv#
+analyserData <- function(filnavn, andenakse, foersteakse) {#
+  data <- read.csv("TEX86.csv")#
+  # Frihedsgrader udregnes#
+  df <- nrow(data) - 2#
+  # Linear model anvender dynamiske kolonnenavne#
+  lmUD <- lm(as.formula(paste(andenakse, "~", foersteakse)), data = data)#
+  # Estimerede linje beregnes#
+  betahat <- sum((data[[andenakse]] - mean(data[[andenakse]])) * (data[[foersteakse]] - mean(data[[foersteakse]]))) /#
+    sum((data[[foersteakse]] - mean(data[[foersteakse]]))^2)#
+  alphahat <- mean(data[[andenakse]]) - betahat * mean(data[[foersteakse]])#
+  sr <- sqrt(sum((data[[andenakse]] - (alphahat + betahat * data[[foersteakse]]))^2) / df)#
+  # Regressionsmodel analyseres#
+  su <- summary(lmUD)#
+  ci <- confint(lmUD)#
+  # Residualer findes#
+  r <- lmUD$residuals#
+  # Opretter et 2x2 layout af grafer#
+  par(mfrow = c(2, 2))#
+  # Figur 1 dannes#
+  plot(data[[foersteakse]], data[[andenakse]], ylim = c(0.2, 0.9), main = paste(andenakse, "vs", foersteakse), #
+       xlab = paste(foersteakse), ylab = andenakse)#
+  abline(lmUD)#
+  abline(alphahat + 2 * sr, betahat, lty = 3)#
+  abline(alphahat - 2 * sr, betahat, lty = 3)#
+  # Figur 2: Residualplot#
+  plot(data[[førsteakse]], r, main = paste("Residualer vs", foersteakse),, xlab = paste(foersteakse), ylab = "Residualer")#
+  abline(0, 0)#
+  # Figur 3: QQplot af residualer#
+  qqnorm(r, ylab = "Residualer")#
+  abline()#
+  # Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+  plot.new()#
+  # Parameterskøn udskrives#
+  print(c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr))#
+  # Udskrift#
+  list(summary = su, confidensinterval = ci)#
+}#
+#
+# Eksempel på brug af funktionen#
+analyserData("TEX86.csv", "andenakse", "foersteakse")
+hjælp
+# Funktion til at udføre analyser med generelle akse navne#
+analyserData <- function(filnavn, andenakse, foersteakse) {#
+  data <- read.csv("TEX86.csv")#
+  # Frihedsgrader udregnes#
+  df <- nrow(data) - 2#
+  # Linear model anvender dynamiske kolonnenavne#
+  lmUD <- lm(as.formula(paste(andenakse, "~", foersteakse)), data = data)#
+  # Estimerede linje beregnes#
+  betahat <- sum((data[[andenakse]] - mean(data[[andenakse]])) * (data[[foersteakse]] - mean(data[[foersteakse]]))) /#
+    sum((data[[foersteakse]] - mean(data[[foersteakse]]))^2)#
+  alphahat <- mean(data[[andenakse]]) - betahat * mean(data[[foersteakse]])#
+  sr <- sqrt(sum((data[[andenakse]] - (alphahat + betahat * data[[foersteakse]]))^2) / df)#
+  # Regressionsmodel analyseres#
+  su <- summary(lmUD)#
+  ci <- confint(lmUD)#
+  # Residualer findes#
+  r <- lmUD$residuals#
+  # Opretter et 2x2 layout af grafer#
+  par(mfrow = c(2, 2))#
+  # Figur 1 dannes#
+  plot(data[[foersteakse]], data[[andenakse]], ylim = c(0.2, 0.9), main = paste(andenakse, "vs", foersteakse), #
+       xlab = paste(foersteakse), ylab = andenakse)#
+  abline(lmUD)#
+  abline(alphahat + 2 * sr, betahat, lty = 3)#
+  abline(alphahat - 2 * sr, betahat, lty = 3)#
+  # Figur 2: Residualplot#
+  plot(data[[førsteakse]], r, main = paste("Residualer vs", foersteakse),, xlab = paste(foersteakse), ylab = "Residualer")#
+  abline(0, 0)#
+  # Figur 3: QQplot af residualer#
+  qqnorm(r, ylab = "Residualer")#
+  abline()#
+  # Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+  plot.new()#
+  # Parameterskøn udskrives#
+  print(c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr))#
+  # Udskrift#
+  list(summary = su, confidensinterval = ci)#
+}#
+#
+# Eksempel på brug af funktionen#
+analyserData("TEX86.csv", "andenakse", "foersteakse")
+# Funktion til at udføre analyser med generelle akse navne#
+analyserData <- function(filnavn, andenakse, foersteakse) {#
+  data <- read.csv("TEX86.csv")#
+  # Frihedsgrader udregnes#
+  df <- nrow(data) - 2#
+  # Linear model anvender dynamiske kolonnenavne#
+  lmUD <- lm(as.formula(paste(andenakse, "~", foersteakse)), data = data)#
+  # Estimerede linje beregnes#
+  betahat <- sum((data[[andenakse]] - mean(data[[andenakse]])) * (data[[foersteakse]] - mean(data[[foersteakse]]))) /#
+    sum((data[[foersteakse]] - mean(data[[foersteakse]]))^2)#
+  alphahat <- mean(data[[andenakse]]) - betahat * mean(data[[foersteakse]])#
+  sr <- sqrt(sum((data[[andenakse]] - (alphahat + betahat * data[[foersteakse]]))^2) / df)#
+  # Regressionsmodel analyseres#
+  su <- summary(lmUD)#
+  ci <- confint(lmUD)#
+  # Residualer findes#
+  r <- lmUD$residuals#
+  # Opretter et 2x2 layout af grafer#
+  par(mfrow = c(2, 2))#
+  # Figur 1 dannes#
+  plot(data[[foersteakse]], data[[andenakse]], ylim = c(0.2, 0.9), main = paste(andenakse, "vs", foersteakse), #
+       xlab = paste(foersteakse), ylab = andenakse)#
+  abline(lmUD)#
+  abline(alphahat + 2 * sr, betahat, lty = 3)#
+  abline(alphahat - 2 * sr, betahat, lty = 3)#
+  # Figur 2: Residualplot#
+  plot(data[[foersteakse]], r, main = paste("Residualer vs", foersteakse),, xlab = paste(foersteakse), ylab = "Residualer")#
+  abline(0, 0)#
+  # Figur 3: QQplot af residualer#
+  qqnorm(r, ylab = "Residualer")#
+  abline()#
+  # Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+  plot.new()#
+  # Parameterskøn udskrives#
+  print(c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr))#
+  # Udskrift#
+  list(summary = su, confidensinterval = ci)#
+}#
+#
+# Eksempel på brug af funktionen#
+analyserData("TEX86.csv", "andenakse", "foersteakse")
+yeboi
+# Funktion til at udføre analyser med generelle akse navne#
+analyserData <- function(filnavn, andenakse, foersteakse) {#
+  data <- read.csv("TEX86.csv")#
+  # Frihedsgrader udregnes#
+  df <- nrow(data) - 2#
+  # Linear model anvender dynamiske kolonnenavne#
+  lmUD <- lm(as.formula(paste(andenakse, "~", foersteakse)), data = data)#
+  # Estimerede linje beregnes#
+  betahat <- sum((data[[andenakse]] - mean(data[[andenakse]])) * (data[[foersteakse]] - mean(data[[foersteakse]]))) /#
+    sum((data[[foersteakse]] - mean(data[[foersteakse]]))^2)#
+  alphahat <- mean(data[[andenakse]]) - betahat * mean(data[[foersteakse]])#
+  sr <- sqrt(sum((data[[andenakse]] - (alphahat + betahat * data[[foersteakse]]))^2) / df)#
+  # Regressionsmodel analyseres#
+  su <- summary(lmUD)#
+  ci <- confint(lmUD)#
+  # Residualer findes#
+  r <- lmUD$residuals#
+  # Opretter et 2x2 layout af grafer#
+  par(mfrow = c(2, 2))#
+  # Figur 1 dannes#
+  plot(data[[foersteakse]], data[[andenakse]], ylim = c(0.2, 0.9), main = paste(andenakse, "vs", foersteakse), #
+       xlab = paste(foersteakse), ylab = andenakse)#
+  abline(lmUD)#
+  abline(alphahat + 2 * sr, betahat, lty = 3)#
+  abline(alphahat - 2 * sr, betahat, lty = 3)#
+  # Figur 2: Residualplot#
+  plot(data[[foersteakse]], r, main = paste("Residualer vs", foersteakse),, xlab = paste(foersteakse), ylab = "Residualer")#
+  abline(0, 0)#
+  # Figur 3: QQplot af residualer#
+  qqnorm(r, ylab = "Residualer")#
+  abline()#
+  # Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+  plot.new()#
+  # Parameterskøn udskrives#
+  print(c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr))#
+  # Udskrift#
+  list(summary = su, confidensinterval = ci)#
+}#
+#
+# Eksempel på brug af funktionen#
+analyserData("TEX86.csv", "andenakse", "foersteakse")
+# Funktion til at udføre analyser med generelle akse navne#
+  data <- read.csv("TEX86.csv")#
+  # Frihedsgrader udregnes#
+  df <- nrow(data) - 2#
+  # Linear model anvender dynamiske kolonnenavne#
+  lmUD <- lm(as.formula(paste(andenakse, "~", foersteakse)), data = data)#
+  # Estimerede linje beregnes#
+  betahat <- sum((data[[andenakse]] - mean(data[[andenakse]])) * (data[[foersteakse]] - mean(data[[foersteakse]]))) /#
+    sum((data[[foersteakse]] - mean(data[[foersteakse]]))^2)#
+  alphahat <- mean(data[[andenakse]]) - betahat * mean(data[[foersteakse]])#
+  sr <- sqrt(sum((data[[andenakse]] - (alphahat + betahat * data[[foersteakse]]))^2) / df)#
+  # Regressionsmodel analyseres#
+  su <- summary(lmUD)#
+  ci <- confint(lmUD)#
+  # Residualer findes#
+  r <- lmUD$residuals#
+  # Opretter et 2x2 layout af grafer#
+  par(mfrow = c(2, 2))#
+  # Figur 1 dannes#
+  plot(data[[foersteakse]], data[[andenakse]], ylim = c(0.2, 0.9), main = paste(andenakse, "vs", foersteakse), #
+       xlab = paste(foersteakse), ylab = andenakse)#
+  abline(lmUD)#
+  abline(alphahat + 2 * sr, betahat, lty = 3)#
+  abline(alphahat - 2 * sr, betahat, lty = 3)#
+  # Figur 2: Residualplot#
+  plot(data[[foersteakse]], r, main = paste("Residualer vs", foersteakse),, xlab = paste(foersteakse), ylab = "Residualer")#
+  abline(0, 0)#
+  # Figur 3: QQplot af residualer#
+  qqnorm(r, ylab = "Residualer")#
+  abline()#
+  # Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+  plot.new()#
+  # Parameterskøn udskrives#
+  print(c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr))#
+  # Udskrift#
+  list(summary = su, confidensinterval = ci)#
+}#
+#
+# Eksempel på brug af funktionen#
+analyserData("TEX86.csv", "andenakse", "foersteakse")
+# Funktion til at udføre analyser med generelle akse navne#
+  data <- read.csv("TEX86.csv")#
+  # Frihedsgrader udregnes#
+  df <- nrow(data) - 2#
+  # Linear model anvender dynamiske kolonnenavne#
+  lmUD <- lm(as.formula(paste(andenakse, "~", foersteakse)), data = data)#
+  # Estimerede linje beregnes#
+  betahat <- sum((data[[andenakse]] - mean(data[[andenakse]])) * (data[[foersteakse]] - mean(data[[foersteakse]]))) /#
+    sum((data[[foersteakse]] - mean(data[[foersteakse]]))^2)#
+  alphahat <- mean(data[[andenakse]]) - betahat * mean(data[[foersteakse]])#
+  sr <- sqrt(sum((data[[andenakse]] - (alphahat + betahat * data[[foersteakse]]))^2) / df)#
+  # Regressionsmodel analyseres#
+  su <- summary(lmUD)#
+  ci <- confint(lmUD)#
+  # Residualer findes#
+  r <- lmUD$residuals#
+  # Opretter et 2x2 layout af grafer#
+  par(mfrow = c(2, 2))#
+  # Figur 1 dannes#
+  plot(data[[foersteakse]], data[[andenakse]], ylim = c(0.2, 0.9), main = paste(andenakse, "vs", foersteakse), #
+       xlab = paste(foersteakse), ylab = andenakse)#
+  abline(lmUD)#
+  abline(alphahat + 2 * sr, betahat, lty = 3)#
+  abline(alphahat - 2 * sr, betahat, lty = 3)#
+  # Figur 2: Residualplot#
+  plot(data[[foersteakse]], r, main = paste("Residualer vs", foersteakse),, xlab = paste(foersteakse), ylab = "Residualer")#
+  abline(0, 0)#
+  # Figur 3: QQplot af residualer#
+  qqnorm(r, ylab = "Residualer")#
+  abline()#
+  # Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+  plot.new()#
+  # Parameterskøn udskrives#
+  print(c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr))#
+  # Udskrift#
+  list(summary = su, confidensinterval = ci)#
+#
+# Eksempel på brug af funktionen#
+analyserData("TEX86.csv", "andenakse", "foersteakse")
+data=read.csv("TEX86.csv")
+read.csv("TEX86.csv")
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(yaskse~xakse,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$yaskse-mean(data$yaskse))*(data$xakse-mean(data$xakse)))/#
+sum((data$xakse-mean(data$xakse))^2)#
+alphahat=mean(data$yaskse)-betahat*mean(data$xakse)#
+sr=sqrt(sum((data$yaskse-(alphahat+betahat*data$xakse))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$xakse,data$yaskse,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$xakse,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+wat
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(yaskse~xakse,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$yaskse-mean(data$yaskse))*(data$xakse-mean(data$xakse)))/#
+sum((data$xakse-mean(data$xakse))^2)#
+alphahat=mean(data$yaskse)-betahat*mean(data$xakse)#
+sr=sqrt(sum((data$yaskse-(alphahat+betahat*data$xakse))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$xakse,data$yaskse,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$xakse,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+data=read.csv("TEX86.csv")
+read.csv("TEX86.csv")
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+# Angiv navnene på dine variabler her #
+data$xakse <- "Temperatur" # Erstat 'xakse' med det faktiske navn på din uafhængige variabel #
+data$yaskse <- "TEX86" # Erstat 'yakse' med det faktiske navn på din afhængige variabel#
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(yaskse~xakse,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$yaskse-mean(data$yaskse))*(data$xakse-mean(data$xakse)))/#
+sum((data$xakse-mean(data$xakse))^2)#
+alphahat=mean(data$yaskse)-betahat*mean(data$xakse)#
+sr=sqrt(sum((data$yaskse-(alphahat+betahat*data$xakse))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$xakse,data$yaskse,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$xakse,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+yo
+# Angiv navnene på dine variabler her #
+data$xakse <- "Temperatur" # Erstat 'xakse' med det faktiske navn på din uafhængige variabel #
+data$yaskse <- "TEX86" # Erstat 'yakse' med det faktiske navn på din afhængige variabel#
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(yaskse~xakse,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$yaskse-mean(data$yaskse))*(data$xakse-mean(data$xakse)))/#
+sum((data$xakse-mean(data$xakse))^2)#
+alphahat=mean(data$yaskse)-betahat*mean(data$xakse)#
+sr=sqrt(sum((data$yaskse-(alphahat+betahat*data$xakse))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$xakse,data$yaskse,main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$xakse,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)
+# Angiv navnene på dine variabler her#
+xColumnName <- "Temperatur" # Erstat 'xakse' med det faktiske navn på din uafhængige variabel#
+yColumnName <- "TEX86" # Erstat 'yakse' med det faktiske navn på din afhængige variabel#
+#
+# Indlæs data#
+data <- read.csv("TEX86.csv")#
+#
+# Frihedsgrader udregnes#
+df <- nrow(data) - 2#
+#
+# Lineær model oprettes med dynamiske variabelnavne#
+lmUD <- lm(formula = as.formula(paste(yColumnName, "~", xColumnName)), data = data)#
+#
+# Estimerede linjeberegninger med dynamiske variabelnavne#
+betahat <- sum((data[[yColumnName]] - mean(data[[yColumnName]])) * (data[[xColumnName]] - mean(data[[xColumnName]]))) /#
+  sum((data[[xColumnName]] - mean(data[[xColumnName]]))^2)#
+alphahat <- mean(data[[yColumnName]]) - betahat * mean(data[[xColumnName]])#
+sr <- sqrt(sum((data[[yColumnName]] - (alphahat + betahat * data[[xColumnName]]))^2) / (df))#
+#
+# Regressionsmodel analyseres#
+su <- summary(lmUD)#
+ci <- confint(lmUD)#
+#
+# Residualer findes#
+r <- lmUD$residuals#
+#
+# Opretter et 2x2 layout af grafer#
+par(mfrow = c(2, 2))#
+#
+# Figur 1: Scatter plot med regressionslinje og konfidensbånd#
+plot(data[[xColumnName]], data[[yColumnName]], main = paste(yColumnName, "vs", xColumnName), xlab = xColumnName, ylab = yColumnName)#
+abline(lmUD)#
+abline(alphahat + 2 * sr, betahat, lty = 3)#
+abline(alphahat - 2 * sr, betahat, lty = 3)#
+#
+# Figur 2: Residual plot#
+plot(data[[xColumnName]], r, main = "Residualer vs. X-akse", xlab = xColumnName, ylab = "Residualer")#
+abline(0, 0)#
+#
+# Figur 3: QQ-plot af residualer#
+qqnorm(r, ylab = "Residualer")#
+qqline(r)#
+#
+# Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# Parameterskøn udskrives#
+c(betahat = betahat, alphahat = alphahat, spredningsskøn = sr)#
+#
+# Udskrift af summary og konfidensintervaller#
+list(summary = su, confidensinterval = ci)
+# Angiv navnene på dine variabler her#
+xColumnName <- "Temperatur" # Erstat 'xakse' med det faktiske navn på din uafhængige variabel#
+yColumnName <- "TEX86" # Erstat 'yakse' med det faktiske navn på din afhængige variabel#
+#
+# Indlæs data#
+data <- read.csv("TEX86.csv")#
+#
+# Frihedsgrader udregnes#
+df <- nrow(data) - 2#
+#
+# Lineær model oprettes med dynamiske variabelnavne#
+lmUD <- lm(formula = as.formula(paste(yColumnName, "~", xColumnName)), data = data)#
+#
+# Estimerede linjeberegninger med dynamiske variabelnavne#
+betahat <- sum((data[[yColumnName]] - mean(data[[yColumnName]])) * (data[[xColumnName]] - mean(data[[xColumnName]]))) /#
+  sum((data[[xColumnName]] - mean(data[[xColumnName]]))^2)#
+alphahat <- mean(data[[yColumnName]]) - betahat * mean(data[[xColumnName]])#
+sr <- sqrt(sum((data[[yColumnName]] - (alphahat + betahat * data[[xColumnName]]))^2) / (df))#
+#
+# Regressionsmodel analyseres#
+su <- summary(lmUD)#
+ci <- confint(lmUD)#
+#
+# Residualer findes#
+r <- lmUD$residuals#
+#
+# Opretter et 2x2 layout af grafer#
+par(mfrow = c(2, 2))#
+#
+# Figur 1: Scatter plot med regressionslinje og konfidensbånd#
+plot(data[[xColumnName]], data[[yColumnName]], main = paste(yColumnName, "vs", xColumnName), xlab = xColumnName, ylab = yColumnName)#
+abline(lmUD)#
+abline(alphahat + 2 * sr, betahat, lty = 3)#
+abline(alphahat - 2 * sr, betahat, lty = 3)#
+#
+# Figur 2: Residual plot#
+plot(data[[xColumnName]], r, main = "Residualer vs. X-akse", xlab = xColumnName, ylab = "Residualer")#
+abline(0, 0)#
+#
+# Figur 3: QQ-plot af residualer#
+qqnorm(r, ylab = "Residualer")#
+qqline(r)#
+#
+# Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# Parameterskøn udskrives#
+c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr)#
+#
+# Udskrift af summary og konfidensintervaller#
+list(summary = su, confidensinterval = ci)
+# Angiv navnene på dine variabler her#
+xColumnName <- "Temperatur" # Erstat 'xakse' med det faktiske navn på din uafhængige variabel#
+yColumnName <- "TEX86" # Erstat 'yakse' med det faktiske navn på din afhængige variabel#
+#
+# Indlæs data#
+data <- read.csv("TEX86.csv")#
+#
+# Frihedsgrader udregnes#
+df <- nrow(data) - 2#
+#
+# Lineær model oprettes med dynamiske variabelnavne#
+lmUD <- lm(formula = as.formula(paste(yColumnName, "~", xColumnName)), data = data)#
+#
+# Estimerede linjeberegninger med dynamiske variabelnavne#
+betahat <- sum((data[[yColumnName]] - mean(data[[yColumnName]])) * (data[[xColumnName]] - mean(data[[xColumnName]]))) /#
+  sum((data[[xColumnName]] - mean(data[[xColumnName]]))^2)#
+alphahat <- mean(data[[yColumnName]]) - betahat * mean(data[[xColumnName]])#
+sr <- sqrt(sum((data[[yColumnName]] - (alphahat + betahat * data[[xColumnName]]))^2) / (df))#
+#
+# Regressionsmodel analyseres#
+su <- summary(lmUD)#
+ci <- confint(lmUD)#
+#
+# Residualer findes#
+r <- lmUD$residuals#
+#
+# Opretter et 2x2 layout af grafer#
+par(mfrow = c(2, 2))#
+#
+# Figur 1: Scatter plot med regressionslinje og konfidensbånd#
+plot(data[[xColumnName]], data[[yColumnName]], main = paste(yColumnName, "vs", xColumnName), xlab = xColumnName, ylab = yColumnName)#
+abline(lmUD)#
+abline(alphahat + 2 * sr, betahat, lty = 3)#
+abline(alphahat - 2 * sr, betahat, lty = 3)#
+#
+# Figur 2: Residual plot#
+plot(data[[xColumnName]], r, main = paste("Residualer vs.", xColumnName), xlab = xColumnName, ylab = "Residualer")#
+abline(0, 0)#
+#
+# Figur 3: QQ-plot af residualer#
+qqnorm(r, ylab = "Residualer")#
+qqline(r)#
+#
+# Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# Parameterskøn udskrives#
+c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr)#
+#
+# Udskrift af summary og konfidensintervaller#
+list(summary = su, confidensinterval = ci)
+# Angiv navnene på dine variabler her#
+xColumnName <- "Temperatur" # Erstat 'xakse' med det faktiske navn på din uafhængige variabel#
+yColumnName <- "TEX86" # Erstat 'yakse' med det faktiske navn på din afhængige variabel#
+#
+# Indlæs data#
+data <- read.csv("TEX86.csv")#
+#
+# Frihedsgrader udregnes#
+df <- nrow(data) - 2#
+#
+# Lineær model oprettes med dynamiske variabelnavne#
+lmUD <- lm(formula = as.formula(paste(yColumnName, "~", xColumnName)), data = data)#
+#
+# Estimerede linjeberegninger med dynamiske variabelnavne#
+betahat <- sum((data[[yColumnName]] - mean(data[[yColumnName]])) * (data[[xColumnName]] - mean(data[[xColumnName]]))) /#
+  sum((data[[xColumnName]] - mean(data[[xColumnName]]))^2)#
+alphahat <- mean(data[[yColumnName]]) - betahat * mean(data[[xColumnName]])#
+sr <- sqrt(sum((data[[yColumnName]] - (alphahat + betahat * data[[xColumnName]]))^2) / (df))#
+#
+# Regressionsmodel analyseres#
+su <- summary(lmUD)#
+ci <- confint(lmUD)#
+#
+# Residualer findes#
+r <- lmUD$residuals#
+#
+# Opretter et 2x2 layout af grafer#
+par(mfrow = c(2, 2))#
+#
+# Figur 1: Scatter plot med regressionslinje og konfidensbånd#
+plot(data[[xColumnName]], data[[yColumnName]], main = paste(yColumnName, "vs", xColumnName), xlab = xColumnName, ylab = yColumnName)#
+abline(lmUD)#
+abline(alphahat + 2 * sr, betahat, lty = 3)#
+abline(alphahat - 2 * sr, betahat, lty = 3)#
+#
+# Figur 2: Residual plot#
+plot(data[[xColumnName]], r, main = paste("Residualer vs.", xColumnName), xlab = xColumnName, ylab = "Residualer")#
+abline(0, 0)#
+#
+# Figur 3: QQ-plot af residualer#
+qqnorm(r, ylab = "Residualer")#
+qqline(r)#
+#
+# Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# Udskrift af Parameterskøn,summary og konfidensintervaller#
+list(c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr)#
+,summary = su, confidensinterval = ci)
+# Angiv navnene på dine variabler her#
+xColumnName <- "Temperatur" # Erstat 'xakse' med det faktiske navn på din uafhængige variabel#
+yColumnName <- "TEX86" # Erstat 'yakse' med det faktiske navn på din afhængige variabel#
+#
+# Indlæs data#
+data <- read.csv("TEX86.csv")#
+#
+# Frihedsgrader udregnes#
+df <- nrow(data) - 2#
+#
+# Lineær model oprettes med dynamiske variabelnavne#
+lmUD <- lm(formula = as.formula(paste(yColumnName, "~", xColumnName)), data = data)#
+#
+# Estimerede linjeberegninger med dynamiske variabelnavne#
+betahat <- sum((data[[yColumnName]] - mean(data[[yColumnName]])) * (data[[xColumnName]] - mean(data[[xColumnName]]))) /#
+  sum((data[[xColumnName]] - mean(data[[xColumnName]]))^2)#
+alphahat <- mean(data[[yColumnName]]) - betahat * mean(data[[xColumnName]])#
+sr <- sqrt(sum((data[[yColumnName]] - (alphahat + betahat * data[[xColumnName]]))^2) / (df))#
+#
+# Regressionsmodel analyseres#
+su <- summary(lmUD)#
+ci <- confint(lmUD)#
+#
+# Residualer findes#
+r <- lmUD$residuals#
+#
+# Opretter et 2x2 layout af grafer#
+par(mfrow = c(2, 2))#
+#
+# Figur 1: Scatter plot med regressionslinje og konfidensbånd#
+plot(data[[xColumnName]], data[[yColumnName]], main = paste(yColumnName, "vs", xColumnName), xlab = xColumnName, ylab = yColumnName)#
+abline(lmUD)#
+abline(alphahat + 2 * sr, betahat, lty = 3)#
+abline(alphahat - 2 * sr, betahat, lty = 3)#
+#
+# Figur 2: Residual plot#
+plot(data[[xColumnName]], r, main = paste("Residualer vs.", xColumnName), xlab = xColumnName, ylab = "Residualer")#
+abline(0, 0)#
+#
+# Figur 3: QQ-plot af residualer#
+qqnorm(r, ylab = "Residualer")#
+qqline(r)#
+#
+# Figur 4: Tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# Udskrift af Parameterskøn,summary og konfidensintervaller#
+list(Parameterskoen=c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr)#
+,summary = su, confidensinterval = ci)
+data=read.csv("TEX86.csv")#
+#
+#Frihedsgrader udregnes#
+df=nrow(data)-2#
+#
+#logaritmen til data regnes#
+lmUD=lm(TEX86~Temperatur,data=data)#
+#
+# estimerede linje beregnes (fra afsnit 5.2, dog modificeret til data og lavet generelt med frihedsgrader)#
+betahat=sum((data$TEX86-mean(data$TEX86))*(data$Temperatur-mean(data$Temperatur)))/#
+sum((data$Temperatur-mean(data$Temperatur))^2)#
+alphahat=mean(data$TEX86)-betahat*mean(data$Temperatur)#
+sr=sqrt(sum((data$TEX86-(alphahat+betahat*data$Temperatur))^2)/(df))#
+#
+# regressionsmodel analyseres#
+su=summary(lmUD)#
+ci=confint(lmUD)#
+#
+# residualer findes#
+r=lmUD$residuals#
+#
+# opretter et 2x2 layout af grafer#
+par(mfrow=c(2,2))#
+#
+# figur 1 dannes (lavet generelt med variabler istedet for tal som i 5.2) #
+plot(data$Temperatur,data$TEX86,ylim=c(0.2,0.9),main="TEX86 vs SST", xlab="AvgYrTemp SST", ylab="TEX86 Index")#
+abline(lmUD)#
+abline(alphahat+2*sr, betahat,lty=3)#
+abline(alphahat-2*sr, betahat,lty=3)#
+#
+# figur 2: residualplot#
+plot(data$Temperatur,r,main="Residualer vs SST",xlab="AvgYrTemp SST",ylab="Residualer")#
+abline(0,0)#
+#
+# figur 3: qqplot af residualer#
+qqnorm(r,ylab="Residualer")#
+abline()#
+#
+# figur 4: tom (kan bruges til en anden graf eller tekst)#
+plot.new()#
+#
+# parameterskøn udskrives#
+c(betahat=betahat,alphahat=alphahat,spredningsskoen=sr)#
+#
+# udskrift#
+list(summary=su,confidensinterval=ci)

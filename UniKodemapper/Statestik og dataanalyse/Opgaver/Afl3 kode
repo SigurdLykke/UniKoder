@@ -1,0 +1,49 @@
+# Angiv navnene på dine variabler her
+xColumnName <- "Temperatur" # Erstat 'xakse' med det faktiske navn på din uafhængige variabel
+yColumnName <- "TEX86" # Erstat 'yakse' med det faktiske navn på din afhængige variabel
+
+# Indlæs data
+data <- read.csv("TEX86.csv")
+
+# Frihedsgrader udregnes
+df <- nrow(data) - 2
+
+# Lineær model oprettes med dynamiske variabelnavne
+lmUD <- lm(formula = as.formula(paste(yColumnName, "~", xColumnName)), data = data)
+
+# Estimerede linjeberegninger med dynamiske variabelnavne
+betahat <- sum((data[[yColumnName]] - mean(data[[yColumnName]])) * (data[[xColumnName]] - mean(data[[xColumnName]]))) /
+  sum((data[[xColumnName]] - mean(data[[xColumnName]]))^2)
+alphahat <- mean(data[[yColumnName]]) - betahat * mean(data[[xColumnName]])
+sr <- sqrt(sum((data[[yColumnName]] - (alphahat + betahat * data[[xColumnName]]))^2) / (df))
+
+# Regressionsmodel analyseres
+su <- summary(lmUD)
+ci <- confint(lmUD)
+
+# Residualer findes
+r <- lmUD$residuals
+
+# Opretter et 2x2 layout af grafer
+par(mfrow = c(2, 2))
+
+# Figur 1: Scatter plot med regressionslinje og konfidensbånd
+plot(data[[xColumnName]], data[[yColumnName]], main = paste(yColumnName, "vs", xColumnName), xlab = xColumnName, ylab = yColumnName)
+abline(lmUD)
+abline(alphahat + 2 * sr, betahat, lty = 3)
+abline(alphahat - 2 * sr, betahat, lty = 3)
+
+# Figur 2: Residual plot
+plot(data[[xColumnName]], r, main = paste("Residualer vs.", xColumnName), xlab = xColumnName, ylab = "Residualer")
+abline(0, 0)
+
+# Figur 3: QQ-plot af residualer
+qqnorm(r, ylab = "Residualer")
+qqline(r)
+
+# Figur 4: Tom (kan bruges til en anden graf eller tekst)
+plot.new()
+
+# Udskrift af Parameterskøn,summary og konfidensintervaller
+list(Parameterskoen=c(betahat = betahat, alphahat = alphahat, spredningsskoen = sr)
+,summary = su, confidensinterval = ci)
